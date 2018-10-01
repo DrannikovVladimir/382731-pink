@@ -28,125 +28,137 @@
     </nav>
   </header>
 
-  <main class="page-main">
-    <h1 class="page-main__title">Конкурс на самое безбашенное приключение с Пинк</h1>
+  <main>
+    <h1 class="main-title">Конкурс на самое безбашенное приключение с Пинк</h1>
 
-    <section class="forms">
-      <p class="forms__decription">Поделитесь своей историей и получите шанс выиграть ценный приз — 1000 миль на вашу бонусную карту! Пожалуйста, заполните форму ниже:</p>
+    <section class="form">
+      <p class="form__decription">Поделитесь своей историей и получите шанс выиграть ценный приз — 1000 миль на вашу бонусную карту! Пожалуйста, заполните форму ниже:</p>
       <form class="main-form"  action="https://echo.htmlacademy.ru" method="post">
-        <ul class="main-form__list">
-          <li class="main-form__list-item">
-            <label class="main-form__user-date-label" for="main-form__user-surname">Фамилия:</label>
-            <input class="main-form__user-date-input" id="main-form__date-surname" type="text" name="user-surname" placeholder="Укажите фамилию*">
-          </li>
-          <li class="main-form__list-item">
-            <label class="main-form__user-date-label" for="main-form__user-name">Имя:</label>
-            <input class="main-form__user-date-input" id="main-form__user-name" type="text" name="user-name" placeholder="Введите ваше имя*">
-          </li>
-          <li class="main-form__list-item">
-            <label class="main-form__user-date-label" for="main-form__user-patronymic">Отчество:</label>
-            <input class="main-form__user-date-input" id="main-form__user-patronymic" type="text" name="user-patronymic" placeholder="Ну и отчество тоже">
-          </li>
-        </ul>
+        <fieldset class="main-form__list-wrapper">
+          <legend class="visually-hidden">ФИО пользователя</legend>
+          <ul class="main-form__list">
+            <li class="main-form__item">
+              <label class="main-form__user-label" for="userSurname">Фамилия:</label>
+              <input class="main-form__user-input" id="userSurname" type="text" name="user-surname" placeholder="Укажите фамилию*">
+            </li>
+            <li class="main-form__item">
+              <label class="main-form__user-label" for="userName">Имя:</label>
+              <input class="main-form__user-input" id="userName" type="text" name="user-name" placeholder="Введите ваше имя*">
+            </li>
+            <li class="main-form__item">
+              <label class="main-form__user-label" for="userPatronymic">Отчество:</label>
+              <input class="main-form__user-input" id="userPatronymic" type="text" name="user-patronymic" placeholder="Ну и отчество тоже">
+            </li>
+          </ul>
+        </fieldset>
 
-        <div class="main-form__list-wrapper">
+        <fieldset class="main-form__list-wrapper">
+          <legend class="visually-hidden">Достижения в путешествиии</legend>
           <p class="main-form__list-subtitle">Ваши безбашенные достижения в путешествии</p>
           <ul class="main-form__list">
-            <li class="main-form__list-item">
-              <input class="main-form__checkbox-input" id="main-form__checkbox-shark" type="checkbox" name="shark" value="shark" checked>
-              <label class="main-form__checkbox-label" for="main-form__checkbox-shark">Сделал селфи с акулой</label>
+            <li class="main-form__item">
+              <input class="main-form__checkbox-input" id="selfieShark" type="checkbox" name="shark" value="shark" checked>
+              <label class="main-form__checkbox-label" for="selfieShark">Сделал селфи с акулой</label>
             </li>
-            <li class="main-form__list-item">
-              <input class="main-form__checkbox-input" id="main-form__checkbox-beach" type="checkbox" name="beach" value="beach" checked>
-              <label class="main-form__checkbox-label" for="main-form__checkbox-beach">Обгорел на пляже</label>
+            <li class="main-form__item">
+              <input class="main-form__checkbox-input" id="burnBeach" type="checkbox" name="beach" value="beach" checked>
+              <label class="main-form__checkbox-label" for="burnBeach">Обгорел на пляже</label>
             </li>
-            <li class="main-form__list-item">
-              <input class="main-form__checkbox-input" id="main-form__checkbox-norris" type="checkbox" name="norris" value="norris">
-              <label class="main-form__checkbox-label" for="main-form__checkbox-norris">Видел Чака Норриса</label>
+            <li class="main-form__item">
+              <input class="main-form__checkbox-input" id="seeNorris" type="checkbox" name="norris" value="norris">
+              <label class="main-form__checkbox-label" for="seeNorris">Видел Чака Норриса</label>
             </li>
-            <li class="main-form__list-item">
-              <input class="main-form__checkbox-input" id="main-form__checkbox-souvenir" type="checkbox" name="souvenir" value="souvenir">
-              <label class="main-form__checkbox-label" for="main-form__checkbox-souvenir">Накупил сувениров</label>
+            <li class="main-form__item">
+              <input class="main-form__checkbox-input" id="buySouvenir" type="checkbox" name="souvenir" value="souvenir">
+              <label class="main-form__checkbox-label" for="buySouvenir">Накупил сувениров</label>
             </li>
-            <li class="main-form__list-item">
-              <input class="main-form__checkbox-input" id="main-form__checkbox-tower" type="checkbox" name="tower" value="tower" checked>
-              <label class="main-form__checkbox-label" for="main-form__checkbox-tower">Удержал башню</label>
+            <li class="main-form__item">
+              <input class="main-form__checkbox-input" id="keepTower" type="checkbox" name="tower" value="tower" checked>
+              <label class="main-form__checkbox-label" for="keepTower">Удержал башню</label>
             </li>
-            <li class="main-form__list-item">
-              <input class="main-form__checkbox-input" id="main-form__checkbox-hotel" type="checkbox" name="hotel" value="hotel">
-              <label class="main-form__checkbox-label" for="main-form__checkbox-hotel">Разгромил отель</label>
+            <li class="main-form__item">
+              <input class="main-form__checkbox-input" id="smashHotel" type="checkbox" name="hotel" value="hotel">
+              <label class="main-form__checkbox-label" for="smashHotel">Разгромил отель</label>
             </li>
           </ul>
-        </div>
+        </fieldset>
 
-        <ul class="main-form__list">
-          <li class="main-form__list-item">
-            <label for="main-form__user-phone" class="main-form__user-date-label">Номер телефона</label>
-            <input class="main-form__user-contact-input" id="main-form__user-phone" type="text" placeholder="Номер, пожалуйста">
-          </li>
-          <li class="main-form__list-item">
-            <label for="main-form__user-email" class="main-form__user-date-label">Адрес почты</label>
-            <input class="main-form__user-contact-input" id="main-form__user-email" type="text" placeholder="Введите почту*">
-          </li>
-        </ul>
+        <fieldset class="main-form__list-wrapper">
+          <legent class="visually-hidden">Контактные данные пользователя</legent>
+          <ul class="main-form__list">
+            <li class="main-form__item">
+              <label class="main-form__user-label" for="userPhone">Номер телефона</label>
+              <input class="main-form__user-input" id="userPhone" type="text" placeholder="Номер, пожалуйста">
+            </li>
+            <li class="main-form__item">
+              <label class="main-form__user-label" for="userEmail">Адрес почты</label>
+              <input class="main-form__user-input" id="userEmail" type="text" placeholder="Введите почту*">
+            </li>
+          </ul>
+        </fieldset>
 
-        <div class="main-form__list-wrapper">
+        <fieldset class="main-form__list-wrapper">
+          <legent class="visually-hidden">Выбирите приложение</legent>
           <p class="main-form__list-subtitle">С каким приложением путешествовали?</p>
           <ul class="main-form__list">
-            <li class="main-form__list-item">
-              <input class="main-form__input-radio" id="main-form__radio-ios" type="radio" name="value-os" value="ios" checked>
-              <label  class="main-form__label-radio" for="main-form__radio-ios">Pink для IOS</label>
+            <li class="main-form__item">
+              <input class="main-form__input-radio" id="radioIos" type="radio" name="value-os" value="ios" checked>
+              <label  class="main-form__label-radio" for="radioIos">Pink для IOS</label>
             </li>
-            <li class="main-form__list-item">
-              <input class="main-form__input-radio" id="main-form__radio-android" type="radio" name="value-os" value="android">
-              <label  class="main-form__label-radio" for="main-form__radio-android">Pink для Android</label>
+            <li class="main-form__item">
+              <input class="main-form__input-radio" id="radioAndroid" type="radio" name="value-os" value="android">
+              <label  class="main-form__label-radio" for="radioAndroid">Pink для Android</label>
             </li>
-            <li class="main-form__list-item">
-              <input class="main-form__input-radio" id="main-form__radio-windows" type="radio" name="value-os" value="windows">
-              <label  class="main-form__label-radio" for="main-form__radio-windows">Windows Phone</label>
+            <li class="main-form__item">
+              <input class="main-form__input-radio" id="radioWindows" type="radio" name="value-os" value="windows">
+              <label  class="main-form__label-radio" for="radioWindows">Windows Phone</label>
             </li>
           </ul>
-        </div>
+        </fieldset>
 
-        <div class="main-form__list-wrapper">
-          <label class="main-form__label-textarea" for="main-form__textarea-emotions">Опишите свои эмоции</label>
-          <textarea class="main-form-textarea" id="main-form__textarea-emotions" rows="5" name="message" placeholder="Можно прям в красках, не стесняясь выражений"></textarea>
-        </div>
+        <fieldset class="main-form__list-wrapper">
+          <legend class="visually-hidden">Опишите свои эмоции</legend>
+          <textarea class="main-form__textarea" rows="5" name="message" placeholder="Можно прям в красках, не стесняясь выражений"></textarea>
+        </fieldset>
 
         <button class="main-form__button" type="submit">Отправить форму</button>
+        <p class="main-form__text-help">*-обязательные поля</p>
       </form>
     </section>
   </main>
 
   <footer class="main-footer">
-    <a class="main-footer__logo-link">
-      <img class="main-footer__logo-image" src="http://placehold.it/150x100" width="147" height="40" alt="Логотип">
+    <a class="main-footer__logo-link footer-logo">
+      <img class="footer-logo__image" src="http://placehold.it/150x100" width="147" height="40" alt="Логотип">
     </a>
 
-    <ul class="main-footer__list">
-      <li class="main-footer__item">
-        <a class="main-footer__social-link" href="https://twitter.com">
-          <span class="visually-hidden">Твиттер</span>
-        </a>
-      </li>
-      <li class="main-footer__item">
-        <a class="main-footer__social-link" href="https://www.facebook.com">
-          <span class="visually-hidden">Фэйсбук</span>
-        </a>
-      </li>
-      <li class="main-footer__item">
-        <a class="main-footer__social-link" href="https://www.youtube.com">
-          <span class="visually-hidden">Ютуб</span>
-        </a>
-      </li>
-    </ul>
+    <div class="main-footer__social social">
+      <ul class="social-list">
+        <li class="social__item">
+          <a class="social__link social__link--twitter" href="https://twitter.com">
+            <span class="visually-hidden">Твиттер</span>
+          </a>
+        </li>
+        <li class="social__item">
+          <a class="social__link social__link--facebook" href="https://www.facebook.com">
+            <span class="visually-hidden">Фэйсбук</span>
+          </a>
+        </li>
+        <li class="social__item">
+          <a class="social__link social__link--youtube" href="https://www.youtube.com">
+            <span class="visually-hidden">Ютуб</span>
+          </a>
+        </li>
+      </ul>
+    </div>
 
-    <div class="main-footer__copyright-wrapper">
-      <p class="main-footer__copyright-text">Разработано</p>
-      <a class="main-footer__htmlacademy-link" href="https://htmlacademy.ru/intensive/adaptive">
-        <span class="visually-hidden">«Профессиональный HTML и CSS, уровень 2»</span>
+    <div class="main-footer__copyright copyright">
+      <p class="copyright__text">Разработано</p>
+      <a class="copyright__link" href="https://htmlacademy.ru/intensive/adaptive">
+        <span class="visually-hidden">HTML Academy</span>
       </a>
     </div>
+
   </footer>
 
   <section class="modal-error">

@@ -28,8 +28,8 @@
     </nav>
   </header>
 
-  <main class="page-main">
-    <h1 class="page-main__title">Фотографии пользователей</h1>
+  <main>
+    <h1 class="main-title">Фотографии пользователей</h1>
 
     <section class="gallery">
       <h2 class="visually-hidden">Галерея с фотографиями пользователей</h2>
@@ -136,32 +136,34 @@
   </main>
 
   <footer class="main-footer">
-    <a class="main-footer__logo-link">
-      <img class="main-footer__logo-image" src="http://placehold.it/150x100" width="147" height="40" alt="Логотип">
+    <a class="main-footer__logo-link footer-logo">
+      <img class="footer-logo__image" src="http://placehold.it/150x100" width="147" height="40" alt="Логотип">
     </a>
 
-    <ul class="main-footer__list">
-      <li class="main-footer__item">
-        <a class="main-footer__social-link" href="https://twitter.com">
-          <span class="visually-hidden">Твиттер</span>
-        </a>
-      </li>
-      <li class="main-footer__item">
-        <a class="main-footer__social-link" href="https://www.facebook.com">
-          <span class="visually-hidden">Фэйсбук</span>
-        </a>
-      </li>
-      <li class="main-footer__item">
-        <a class="main-footer__social-link" href="https://www.youtube.com">
-          <span class="visually-hidden">Ютуб</span>
-        </a>
-      </li>
-    </ul>
+    <div class="main-footer__social social">
+      <ul class="social-list">
+        <li class="social__item">
+          <a class="social__link social__link--twitter" href="https://twitter.com">
+            <span class="visually-hidden">Твиттер</span>
+          </a>
+        </li>
+        <li class="social__item">
+          <a class="social__link social__link--facebook" href="https://www.facebook.com">
+            <span class="visually-hidden">Фэйсбук</span>
+          </a>
+        </li>
+        <li class="social__item">
+          <a class="social__link social__link--youtube" href="https://www.youtube.com">
+            <span class="visually-hidden">Ютуб</span>
+          </a>
+        </li>
+      </ul>
+    </div>
 
-    <div class="main-footer__copyright-wrapper">
-      <p class="main-footer__copyright-text">Разработано</p>
-      <a class="main-footer__htmlacademy-link" href="https://htmlacademy.ru/intensive/adaptive">
-        <span class="visually-hidden">«Профессиональный HTML и CSS, уровень 2»</span>
+    <div class="main-footer__copyright copyright">
+      <p class="copyright__text">Разработано</p>
+      <a class="copyright__link" href="https://htmlacademy.ru/intensive/adaptive">
+        <span class="visually-hidden">HTML Academy</span>
       </a>
     </div>
 
