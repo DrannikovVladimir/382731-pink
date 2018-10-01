@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <title>Галерея фотографий</title>
+</head>
+<body>
+  <header class="page-header">
+    <a class="page-header__logo-link">
+      <img class="page-header__logo-image" src="http://placehold.it/150x100" width="75" height="22" alt="Логотип">
+    </a>
+    <nav class="main-nav">
+      <button class="main-nav__toggle" type="button">Открыть меню</button>
+      <ul class="main-nav__list site-list">
+        <li class="site-list__item">
+          <a href="index.html">Главная</a>
+        </li>
+        <li class="site-list__item site-list__item--active">
+          <a>Фотографии</a>
+        </li>
+        <li class="site-list__item">
+          <a href="form.html">Конкурс</a>
+        </li>
+        <li class="site-list__item">
+          <a href="https://htmlacademy.ru">HTML Academy</a>
+        </li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <h1 class="main-title">Фотографии пользователей</h1>
+
+    <section class="gallery">
+      <h2 class="visually-hidden">Галерея с фотографиями пользователей</h2>
+      <p class="gallery__description">Взгляните на фотографии, которые выкладывают пользователи! Видите, как не хватает ваших?</p>
+      <ul class="gallery__list">
+        <li class="gallery__item gallery__item--current">
+          <a class="gallery__link" href="photo.html">
+            <img class="gallery__image" src="http://placehold.it/150x100" alt="Описание фотографий">
+          </a>
+          <p class="gallery__user-name">Анна<span class="gallery__user-time">(5 минут назад)</span></p>
+          <p class="gallery__user-photo-description">Прыгать или нет? Напишите в коментарии свой совет и смотрите прямую трансляцию в перископе, задавайте свои вопросы!</p>
+          <p class="gallery__user-photo-like">Нравится: 215</p>
+        </li>
+        <li class="gallery__item">
+          <a class="gallery__link" href="photo.html">
+            <img class="gallery__image" src="http://placehold.it/150x100" alt="Описание фотографий">
+          </a>
+          <p class="gallery__user-name">Левон<span class="gallery__user-time">(5 часов назад)</span></p>
+          <p class="gallery__user-photo-description">Вчера он на луну летал, сегодня в руки к нам попал.</p>
+          <p class="gallery__user-photo-like">Нравится: 336</p>
+        </li>
+        <li class="gallery__item">
+          <a class="gallery__link" href="photo.html">
+            <img class="gallery__image" src="http://placehold.it/150x100" alt="Описание фотографий">
+          </a>
+          <p class="gallery__user-name">Антон<span class="gallery__user-time">(12 часов назад)</span></p>
+          <p class="gallery__user-photo-description">Соседи будут рады!</p>
+          <p class="gallery__user-photo-like">Нравится: 666</p>
+        </li>
+        <li class="gallery__item">
+          <a class="gallery__link" href="photo.html">
+            <img class="gallery__image" src="http://placehold.it/150x100" alt="Описание фотографий">
+          </a>
+          <p class="gallery__user-name">Борис<span class="gallery__user-time">(20 часов назад)</span></p>
+          <p class="gallery__user-photo-description">Здесь могла быть ваша цитата о высоком и вечном.</p>
+          <p class="gallery__user-photo-like">Нравится: 215</p>
+        </li>
+        <li class="gallery__item">
+          <a class="gallery__link" href="photo.html">
+            <img class="gallery__image" src="http://placehold.it/150x100" alt="Описание фотографий">
+          </a>
+          <p class="gallery__user-name">Сергей<span class="gallery__user-time">(25 часов назад)</span></p>
+          <p class="gallery__user-photo-description">Самая кубанская в мире!</p>
+          <p class="gallery__user-photo-like">Нравится: 4</p>
+        </li>
+        <li class="gallery__item">
+          <a class="gallery__link" href="photo.html">
+            <img class="gallery__image" src="http://placehold.it/150x100" alt="Описание фотографий">
+          </a>
+          <p class="gallery__user-name">Максим<span class="gallery__user-time">(40 часов назад)</span></p>
+          <p class="gallery__user-photo-description">Где снег-то?</p>
+          <p class="gallery__user-photo-like">Нравится: 150</p>
+        </li>
+        <li class="gallery__item">
+          <a class="gallery__link" href="photo.html">
+            <img class="gallery__image" src="http://placehold.it/150x100" alt="Описание фотографий">
+          </a>
+          <p class="gallery__user-name">Надежда<span class="gallery__user-time">(45 часов назад)</span></p>
+          <p class="gallery__user-photo-description">Всем GM и взаимные лайки!</p>
+          <p class="gallery__user-photo-like">Нравится: 2560</p>
+        </li>
+      </ul>
+      <p class="gallery__slogan">Затмите их всех! Выкладывайте все, что накопилось в телефоне!</p>
+    </section>
+
+    <section class="photo-post">
+      <h2 class="visually-hidden">Обработать и запостить фотографию</h2>
+      <form class="post-form" action="https://echo.htmlacademy.ru" method="post">
+        <img class="post-form__image" src="http://placehold.it/150x100" alt="Изображение для обработки">
+        <div class="photo-form__crop">
+          <button class="photo-form__button photo-form__button--crop">
+            <span class="visually-hidden">Обрезать</span>
+          </button>
+        </div>
+        <div class="photo-form__crop-range-control">
+          <div class="photo-form__crop-scale"></div>
+          <div class="photo-form__crop-toggle"></div>
+        </div>
+
+        <div class="photo-form__fill">
+          <button class="photo-form__button photo-form__button--fill">
+            <span class="visually-hidden">Залить</span>
+          </button>
+        </div>
+        <div class="photo-form__fill-range-control">
+          <div class="photo-form__fill-scale"></div>
+          <div class="photo-form__fill-toggle"></div>
+        </div>
+
+        <div class="photo-form__contrast">
+          <button class="photo-form__button photo-form__button--contrast">
+            <span class="visually-hidden">Контраст</span>
+          </button>
+        </div>
+        <div class="photo-form__contrast-range-control">
+          <div class="photo-form__contrast-scale"></div>
+          <div class="photo-form__contrast-toggle"></div>
+        </div>
+
+        <button class="photo-form__button-post" type="submit">Запостить</button>
+        <button class="photo-form__button-clear" type="button">Отмена</button>
+      </form>
+    </section>
+  </main>
+
+  <footer class="main-footer">
+    <a class="main-footer__logo-link footer-logo">
+      <img class="footer-logo__image" src="http://placehold.it/150x100" width="147" height="40" alt="Логотип">
+    </a>
+
+    <ul class="social-list social">
+      <li class="social__item">
+        <a class="social__link social__link--twitter" href="https://twitter.com">
+          <span class="visually-hidden">Твиттер</span>
+        </a>
+      </li>
+      <li class="social__item">
+        <a class="social__link social__link--facebook" href="https://www.facebook.com">
+          <span class="visually-hidden">Фэйсбук</span>
+        </a>
+      </li>
+      <li class="social__item">
+        <a class="social__link social__link--youtube" href="https://www.youtube.com">
+          <span class="visually-hidden">Ютуб</span>
+        </a>
+      </li>
+    </ul>
+
+    <div class="main-footer__copyright copyright">
+      <p class="copyright__text">Разработано</p>
+      <a class="copyright__link" href="https://htmlacademy.ru/intensive/adaptive">
+        <span class="visually-hidden">HTML Academy</span>
+      </a>
+    </div>
+  </footer>
+</body>
+</html>
