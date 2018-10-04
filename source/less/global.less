@@ -1,33 +1,43 @@
 @font-face {
-    font-family: "Open Sans";
-    src: local("Open Sans Light"), local("opensanslight"),
-        url("../fonts/opensanslight.woff2") format("woff2"),
-        url("../fonts/opensanslight.woff") format("woff");
-    font-weight: 300;
-    font-style: normal;
+  font-family: "Open Sans";
+  src: local("Open Sans Light"),
+    local("opensanslight"),
+    url("../fonts/opensanslight.woff2") format("woff2"),
+    url("../fonts/opensanslight.woff") format("woff");
+  font-weight: 300;
+  font-style: normal;
 }
+
 @font-face {
-    font-family: "Open Sans";
-    src: local("Open Sans"), local("opensans"),
-        url("../fonts/opensans.woff2") format("woff2"),
-        url("../fonts/opensans.woff") format("woff");
-    font-weight: normal;
-    font-style: normal;
+  font-family: "Open Sans";
+  src: local("Open Sans"),
+    local("opensans"),
+    url("../fonts/opensans.woff2") format("woff2"),
+    url("../fonts/opensans.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
 }
+
 @font-face {
-    font-family: "Open Sans";
-    src: local("Open Sans Bold"), local("opensansbold"),
-        url("../fonts/opensansbold.woff2") format("woff2"),
-        url("../fonts/opensansbold.woff") format("woff");
-    font-weight: bold;
-    font-style: normal;
+  font-family: "Open Sans";
+  src: local("Open Sans Bold"),
+    local("opensansbold"),
+    url("../fonts/opensansbold.woff2") format("woff2"),
+    url("../fonts/opensansbold.woff") format("woff");
+  font-weight: bold;
+  font-style: normal;
 }
+
 html {
   box-sizing: border-box;
 }
-*, *::before, *::after {
+
+*,
+*::before,
+*::after {
   box-sizing: inherit;
 }
+
 body {
   margin: 0;
   padding: 0;
@@ -37,12 +47,15 @@ body {
   .main-text();
   color: @main-color;
 }
+
 img {
   max-width: 100%;
 }
+
 a {
   text-decoration: none;
 }
+
 .button-form {
   margin: 0 auto;
   padding-top: 17px;
@@ -57,6 +70,7 @@ a {
 
   border: none;
 }
+
 .button-post {
   margin: 0 auto;
   padding-top: 16px;
