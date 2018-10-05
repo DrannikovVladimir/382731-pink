@@ -3,12 +3,15 @@
 
   text-align: center;
 
-  background: @bg-color url("../../img/iphone-screen-mobile@1x.png") center bottom -45px no-repeat;
+  background-color: @bg-main-color;
+  background-image: url("../../img/iphone-screen-mobile@1x.png");
+  background-position: center bottom -45px;
+  background-repeat: no-repeat;
 }
 
 .features__slogan {
   margin: 0;
-  .light();
+  .text-light();
   .main-text(24px, 30px);
 
   &:first-of-type {

@@ -8,16 +8,16 @@
 }
 
 .rates__header {
-  color: @bg-color;
+  color: @bg-main-color;
   text-align: center;
 
-  background-color: @main-color;
+  background-color: @basic-color;
 }
 
 .rates__item {
   text-align: left;
 
-  border-bottom: 2px solid @border-color;
+  border-bottom: 2px solid @table-border-color;
 }
 
 .rates__item-title {
@@ -25,11 +25,11 @@
 }
 
 .rates__title-name {
-  .bold();
+  .text-bold();
   .other-text();
 }
 
 .rates__title-price {
-  .light();
+  .text-light();
   .other-text(24px, 30px)
 }
