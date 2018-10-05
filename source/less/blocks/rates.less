@@ -1,0 +1,35 @@
+.rates {
+  padding-bottom: 40px;
+  text-align: center;
+}
+
+.rates__list {
+  margin: 0 auto 40px;
+}
+
+.rates__header {
+  color: @bg-main-color;
+  text-align: center;
+
+  background-color: @basic-color;
+}
+
+.rates__item {
+  text-align: left;
+
+  border-bottom: 2px solid @border-color;
+}
+
+.rates__item-title {
+  min-width: 280px;
+}
+
+.rates__title-name {
+  .text-bold();
+  .other-text();
+}
+
+.rates__title-price {
+  .text-light();
+  .other-text(24px, 30px)
+}

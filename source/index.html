@@ -3,6 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <title>Главная страница</title>
+  <link rel="stylesheet" href="/css/style.css">
 </head>
 <body>
   <header class="page-header">
@@ -13,16 +14,16 @@
       <button class="main-nav__toggle" type="button">Открыть меню</button>
       <ul class="main-nav__list site-list">
         <li class="site-list__item site-list__item--active">
-          <a>Главная</a>
+          <a class="site-list__link">Главная</a>
         </li>
         <li class="site-list__item">
-          <a href="photo.html">Фотографии</a>
+          <a class="site-list__link" href="photo.html">Фотографии</a>
         </li>
         <li class="site-list__item">
-          <a href="form.html">Конкурс</a>
+          <a class="site-list__link" href="form.html">Конкурс</a>
         </li>
         <li class="site-list__item">
-          <a href="https://htmlacademy.ru">HTML Academy</a>
+          <a class="site-list__link" href="https://htmlacademy.ru">HTML Academy</a>
         </li>
       </ul>
     </nav>
@@ -31,26 +32,28 @@
   <main>
     <h1 class="visually-hidden">Мобильное приложение Пинк</h1>
     <section class="intro">
-      <h2 class="visually-hidden">Взгляните на жизнь ярче!</h2>
-      <a class="intro__button" href="https://www.apple.com/itunes">Скачать приложение</a>
-      <ul class="intro__list">
-        <li class="intro__item">
-          <a class="intro__link intro__link--apple" href="https://www.apple.com/itunes">
-            <span class="visually-hidden">Apple</span>
-          </a>
-        </li>
-        <li class="intro__item">
-          <a class="intro__link intro__link--android" href="https://play.google.com/store">
-            <span class="visually-hidden">Android</span>
-          </a>
-        </li>
-        <li class="intro__item">
-          <a class="intro__link intro__link--winsows" href="https://www.microsoft.com/ru-ru/store/b/home">
-            <span class="visually-hidden">Windows</span>
-          </a>
-        </li>
-      </ul>
-      <p class="intro__description">Доступно для iPhone, iPad, Android, Windows Phone, OS X, Windows 8</p>
+      <div class="intro__wrapper">
+        <h2 class="visually-hidden">Взгляните на жизнь ярче!</h2>
+        <a class="intro__button button" href="https://www.apple.com/itunes">Скачать приложение</a>
+        <ul class="intro__list">
+          <li class="intro__item">
+            <a class="intro__link intro__link--apple" href="https://www.apple.com/itunes">
+              <span class="visually-hidden">Apple</span>
+            </a>
+          </li>
+          <li class="intro__item">
+            <a class="intro__link intro__link--android" href="https://play.google.com/store">
+              <span class="visually-hidden">Android</span>
+            </a>
+          </li>
+          <li class="intro__item">
+            <a class="intro__link intro__link--winsows" href="https://www.microsoft.com/ru-ru/store/b/home">
+              <span class="visually-hidden">Windows</span>
+            </a>
+          </li>
+        </ul>
+        <p class="intro__description">Доступно для iPhone, iPad, Android, Windows Phone, OS X, Windows 8</p>
+      </div>
     </section>
 
     <section class="features">
@@ -102,10 +105,10 @@
       <div class="rates__wrapper slider">
         <h2 class="visually-hidden">Тарифы</h2>
         <table class="rates__list">
-          <tr>
+          <tr class="rates__header">
             <th class="rates__item-title rates__item--hit">
-              <span class="rates__item-title-name">Стандарт</span><br>
-              <span class="rates__item-title-price">3,99 usd</span>
+              <span class="rates__title-name">Стандарт</span><br>
+              <span class="rates__title-price">3,99 usd</span>
             </th>
           </tr>
           <tr>
@@ -131,16 +134,16 @@
       <div class="contacts__wrapper">
         <h2 class="contacts__title">Остались вопросы?<br>Свяжитесь с нами!</h2>
         <div class="contacts__inner-wrapper">
-          <p class="contacts__title">Звоните:</p>
-          <a class="contacts__phone-link" href="tel:+78125556666">Тел.: +7 (812) 555-66-66</a>
+          <p class="contacts__subtitle">Звоните:</p>
+          <a class="contacts__text" href="tel:+78125556666">Тел.: +7 (812) 555-66-66</a>
         </div>
         <div class="contacts__inner-wrapper">
-          <p class="contacts__title">Пишите:</p>
-          <a class="contacts__email" href="mailto:mail@htmlacademy.ru">mail@htmlacademy.ru</a>
+          <p class="contacts__subtitle">Пишите:</p>
+          <a class="contacts__text" href="mailto:mail@htmlacademy.ru">mail@htmlacademy.ru</a>
         </div>
         <div class="contacts__inner-wrapper">
-          <p class="contacts__title">Приезжайте в гости:</p>
-          <p class="contacts__address">ул. Большая<br>Конюшенная, 19/8</p>
+          <p class="contacts__subtitle">Приезжайте в гости:</p>
+          <p class="contacts__text">ул. Большая<br>Конюшенная, 19/8</p>
         </div>
       </div>
 
