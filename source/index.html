@@ -2,78 +2,100 @@
 <html lang="ru">
 <head>
   <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="format-detection" content="telephone=no">
   <title>Главная страница</title>
   <link rel="stylesheet" href="/css/style.css">
 </head>
 <body>
   <header class="page-header">
-    <a class="page-header__logo-link">
-      <img class="page-header__logo-image" src="http://placehold.it/150x100" width="75" height="22" alt="Логотип">
-    </a>
-    <nav class="main-nav">
-      <button class="main-nav__toggle" type="button">Открыть меню</button>
-      <ul class="main-nav__list site-list">
-        <li class="site-list__item site-list__item--active">
-          <a class="site-list__link">Главная</a>
-        </li>
-        <li class="site-list__item">
-          <a class="site-list__link" href="photo.html">Фотографии</a>
-        </li>
-        <li class="site-list__item">
-          <a class="site-list__link" href="form.html">Конкурс</a>
-        </li>
-        <li class="site-list__item">
-          <a class="site-list__link" href="https://htmlacademy.ru">HTML Academy</a>
-        </li>
-      </ul>
-    </nav>
+    <div class="page-header__wrapper">
+      <a class="page-header__logo-link">
+        <img class="page-header__logo-image" src="http://placehold.it/150x100" width="75" height="22" alt="Логотип">
+      </a>
+      <nav class="main-nav">
+        <!-- <button class="main-nav__toggle" type="button">Открыть меню</button> -->
+        <ul class="main-nav__list site-list">
+          <li class="site-list__item site-list__item--active">
+            <a class="site-list__link">Главная</a>
+          </li>
+          <li class="site-list__item">
+            <a class="site-list__link" href="photo.html">Фотографии</a>
+          </li>
+          <li class="site-list__item">
+            <a class="site-list__link" href="form.html">Конкурс</a>
+          </li>
+          <li class="site-list__item">
+            <a class="site-list__link" href="https://htmlacademy.ru">HTML Academy</a>
+          </li>
+        </ul>
+      </nav>
+    </div>
   </header>
 
   <main>
     <h1 class="visually-hidden">Мобильное приложение Пинк</h1>
     <section class="intro">
       <div class="intro__wrapper">
-        <h2 class="visually-hidden">Взгляните на жизнь ярче!</h2>
-        <a class="intro__button button" href="https://www.apple.com/itunes">Скачать приложение</a>
-        <ul class="intro__list">
-          <li class="intro__item">
-            <a class="intro__link intro__link--apple" href="https://www.apple.com/itunes">
-              <span class="visually-hidden">Apple</span>
-            </a>
-          </li>
-          <li class="intro__item">
-            <a class="intro__link intro__link--android" href="https://play.google.com/store">
-              <span class="visually-hidden">Android</span>
-            </a>
-          </li>
-          <li class="intro__item">
-            <a class="intro__link intro__link--winsows" href="https://www.microsoft.com/ru-ru/store/b/home">
-              <span class="visually-hidden">Windows</span>
-            </a>
-          </li>
-        </ul>
-        <p class="intro__description">Доступно для iPhone, iPad, Android, Windows Phone, OS X, Windows 8</p>
+        <div class="intro-inner__wrapper">
+          <h2 class="intro__title">Взгляните на жизнь ярче!</h2>
+          <a class="intro__button button" href="https://www.apple.com/itunes">Скачать приложение</a>
+          <ul class="intro__list">
+            <li class="intro__item">
+              <a class="intro__link intro__link--apple" href="https://www.apple.com/itunes">
+                <span class="visually-hidden">Apple</span>
+              </a>
+            </li>
+            <li class="intro__item">
+              <a class="intro__link intro__link--android" href="https://play.google.com/store">
+                <span class="visually-hidden">Android</span>
+              </a>
+            </li>
+            <li class="intro__item">
+              <a class="intro__link intro__link--winsows" href="https://www.microsoft.com/ru-ru/store/b/home">
+                <span class="visually-hidden">Windows</span>
+              </a>
+            </li>
+          </ul>
+          <p class="intro__description">Доступно для iPhone, iPad, Android, Windows Phone, OS X, Windows 8</p>
+        </div>
       </div>
     </section>
 
     <section class="features">
-      <h2 class="visually-hidden">Характеристики приложения</h2>
-      <p class="features__slogan">Устали от серости мегополиса?</p>
-      <p class="features__slogan">Нам есть что предложить вам!</p>
-      <ul class="features__list">
-        <li class="features__item">
-          <h3 class="features__item-title">Поднимает настроение</h3>
-          <p class="features__item-text">Приложение позволит вам победить осеннюю хандру и депрессию буквально в несколько кликов!</p>
-        </li>
-        <li class="features__item">
-          <h3 class="features__item-title">Меняет мир вокруг</h3>
-          <p class="features__item-text">Сделайте снимок и украсьте его смайликом или текстовой подписью, чтобы усилить эффект</p>
-        </li>
-        <li class="features__item">
-          <h3 class="features__item-title">Заводит новых друзей</h3>
-          <p class="features__item-text">Ставьте лайки, комментируйте, делитесь фотографиями с друзьями и заводите новых</p>
-        </li>
-      </ul>
+      <div class="features__wrapper">
+        <div class="features-title__wrapper">
+          <h2 class="visually-hidden">Характеристики приложения</h2>
+          <p class="features__slogan">Устали от серости мегополиса?</p>
+          <p class="features__slogan">Нам есть что вам предложить!</p>
+        </div>
+        <div class="features-inner__wrapper">
+          <div class="features-list__wrapper">
+            <ul class="features__list">
+              <li class="features__item">
+                <h3 class="features__item-title">Поднимает настроение</h3>
+                <p class="features__item-text">Приложение позволит вам победить осеннюю хандру и депрессию буквально в несколько кликов!</p>
+              </li>
+              <li class="features__item">
+                <h3 class="features__item-title">Меняет мир вокруг</h3>
+                <p class="features__item-text">Сделайте снимок и украсьте его смайликом или текстовой подписью, чтобы усилить эффект</p>
+              </li>
+              <li class="features__item">
+                <h3 class="features__item-title">Заводит новых друзей</h3>
+                <p class="features__item-text">Ставьте лайки, комментируйте, делитесь фотографиями с друзьями и заводите новых</p>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <div class="features-effect__wrapper">
+        <div class="features-effect__inner-wrapper">
+          <h3 class="features-effect__title">Эффект на 24 часа!</h3>
+          <p class="features-effect__text">Британские ученые провели исследования<br>и доказали, что положительный эффект<br>от использования приложения длится<br>целые сутки!</p>
+          <a href="" class="features-effect__link">Узнать больше об исследовании</a>
+        </div>
+      </div>
     </section>
 
     <section class="feedback">

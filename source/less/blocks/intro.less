@@ -11,9 +11,28 @@
   background-repeat: no-repeat;
 }
 
+.intro__wrapper {
+  margin: 0 auto;
+  padding: 0 20px;
+  width: 320px;
+}
+
+.intro__title {
+  display: none;
+}
+
+.intro__list {
+  display: flex;
+
+  margin: 0;
+  padding: 0;
+
+  list-style: none;
+}
+
 .intro__button {
   margin: 0 auto;
-  padding: 18px 35px;
+  padding: 18px 25px;
 
   display: block;
   max-width: 280px;
@@ -30,4 +49,52 @@
   margin: 0;
   .text-light();
   color: @bg-main-color;
+}
+
+@media (min-width: 660px) {
+  .intro {
+    display: flex;
+    padding: 100px 20px 110px;
+
+    background-image: url("../../img/iphone-hand-tablet@1x.png");
+    background-position: center bottom;
+    background-color: transparent;
+    background-repeat: no-repeat;
+  }
+
+  .intro__wrapper {
+    display: flex;
+
+    margin: 0;
+  }
+
+  .intro-inner__wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    max-width: 300px;
+    min-height: 410px;
+    // margin-right: auto;
+  }
+
+  .intro__title {
+    display: block;
+    margin: 0;
+
+    color: @bg-main-color;
+    .text-light();
+    .other-text(40px, 34px);
+  }
+}
+
+.intro__description {
+  .other-text(18px, 24px);
+}
+
+@media (min-width: 960px) {
+  .intro__wrapper {
+    width: 960px;
+    margin: 0 auto;
+  }
 }

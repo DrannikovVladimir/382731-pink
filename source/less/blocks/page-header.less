@@ -1,0 +1,32 @@
+.page-header {
+  min-height: 110px;
+  background-color: @basic-color;
+}
+
+.page-header__wrapper {
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+
+@media (min-width: 660px) {
+  .page-header__wrapper {
+    width: 660px;
+  }
+}
+
+@media (min-width: 960px) {
+  .page-header__wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    width: 960px;
+  }
+  .page-header {
+    display: flex;
+    align-items: center;
+
+    background-color: rgba(0, 0, 0, 0.3);
+  }
+}
