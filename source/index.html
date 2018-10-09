@@ -92,7 +92,7 @@
       <div class="features-effect__wrapper">
         <div class="features-effect__inner-wrapper">
           <h3 class="features-effect__title">Эффект на 24 часа!</h3>
-          <p class="features-effect__text">Британские ученые провели исследования<br>и доказали, что положительный эффект<br>от использования приложения длится<br>целые сутки!</p>
+          <p class="features-effect__text">Британские ученые провели исследования и доказали, что положительный эффект от использования приложения длится целые сутки!</p>
           <a href="" class="features-effect__link">Узнать больше об исследовании</a>
         </div>
       </div>
@@ -104,6 +104,7 @@
         <div class="feedback__list slider__list">
           <article class="feedback__item slider__item">
             <h3 class="feedback__item-title">Николай Петров</h3>
+            <p class="feedback__item-subtitle">25 лет, водитель трамвая</p>
             <p class="feedback__item-text">«Это приложение перевернуло мой мир и позволило по-новому взглянуть на привычные серые вещи! А еще я познакомился со своей будущей женой в комментариях к выложенной фотографии!»</p>
           </article>
           <article class="feedback__item slider__item">
@@ -124,23 +125,42 @@
     </section>
 
     <section class="rates">
-      <div class="rates__wrapper slider">
+      <div class="rates__wrapper">
         <h2 class="visually-hidden">Тарифы</h2>
         <table class="rates__list">
           <tr class="rates__header">
+            <th class="rates__item-title">
+            </th>
+            <th class="rates__item-title">
+              <span class="rates__title-name">База</span><br>
+              <span class="rates__title-price">1,99 usd</span>
+            </th>
             <th class="rates__item-title rates__item--hit">
               <span class="rates__title-name">Стандарт</span><br>
               <span class="rates__title-price">3,99 usd</span>
             </th>
+            <th class="rates__item-title">
+              <span class="rates__title-name">Анлим</span><br>
+              <span class="rates__title-price">9,99 usd</span>
+            </th>
           </tr>
           <tr>
-            <td class="rates__item rates__item--yes">Розовый фильтр</td>
+            <td class="rates__item">Розовый фильтр</td>
+            <td class="rates__item rates__item-filter rates__item--yes" filter="Розовый фильтр"></td>
+            <td class="rates__item rates__item-filter rates__item--yes" filter="Розовый фильтр"></td>
+            <td class="rates__item rates__item-filter rates__item--yes" filter="Розовый фильтр"></td>
           </tr>
           <tr>
-            <td class="rates__item rates__item--yes">Смайлики</td>
+            <td class="rates__item">Смайлики</td>
+            <td class="rates__item rates__item-smile rates__item--no" smile="Смайлики"></td>
+            <td class="rates__item rates__item-smile rates__item--yes" smile="Смайлики"></td>
+            <td class="rates__item rates__item-smile rates__item--yes" smile="Смайлики"></td>
           </tr>
           <tr>
-            <td class="rates__item rates__item--no">Комментарии</td>
+            <td class="rates__item">Комментарии</td>
+            <td class="rates__item rates__item-comment rates__item--no" comment="Комментарии"></td>
+            <td class="rates__item rates__item-comment rates__item--no" comment="Комментарии"></td>
+            <td class="rates__item rates__item-comment rates__item--yes" comment="Комментарии"></td>
           </tr>
         </table>
       </div>
@@ -155,17 +175,19 @@
     <section class="contacts">
       <div class="contacts__wrapper">
         <h2 class="contacts__title">Остались вопросы?<br>Свяжитесь с нами!</h2>
-        <div class="contacts__inner-wrapper">
-          <p class="contacts__subtitle">Звоните:</p>
-          <a class="contacts__text" href="tel:+78125556666">Тел.: +7 (812) 555-66-66</a>
-        </div>
-        <div class="contacts__inner-wrapper">
-          <p class="contacts__subtitle">Пишите:</p>
-          <a class="contacts__text" href="mailto:mail@htmlacademy.ru">mail@htmlacademy.ru</a>
-        </div>
-        <div class="contacts__inner-wrapper">
-          <p class="contacts__subtitle">Приезжайте в гости:</p>
-          <p class="contacts__text">ул. Большая<br>Конюшенная, 19/8</p>
+        <div class="contacts__wrapper-inner">
+          <div class="contacts__wrapper-box">
+            <p class="contacts__subtitle">Звоните:</p>
+            <a class="contacts__text" href="tel:+78125556666">Тел.: +7 (812) 555-66-66</a>
+          </div>
+          <div class="contacts__wrapper-box">
+            <p class="contacts__subtitle">Пишите:</p>
+            <a class="contacts__text" href="mailto:mail@htmlacademy.ru">mail@htmlacademy.ru</a>
+          </div>
+          <div class="contacts__wrapper-box">
+            <p class="contacts__subtitle">Приезжайте в гости:</p>
+            <p class="contacts__text">ул. Большая<br>Конюшенная, 19/8</p>
+          </div>
         </div>
       </div>
 

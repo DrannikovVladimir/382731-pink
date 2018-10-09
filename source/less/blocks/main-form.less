@@ -1,9 +1,11 @@
 .main-form {
-  text-align: center;
+  // text-align: center;
 }
 
 .main-form__list-wrapper {
-  border: none;
+  padding: 0;
+  margin: 0;
+  margin-bottom: 40px;
 }
 
 .main-form__list {
@@ -26,7 +28,13 @@
   text-transform: uppercase;
 }
 
-.main-form__list-subtitle {
+.main-form__input {
+  width: 100%;
+
+  .other-text(18px, 30px);
+}
+
+.main-form__subtitle {
   margin-bottom: 40px;
 
   .main-text(14px, 18px);
@@ -45,7 +53,9 @@
 
   text-align: left;
 
-  border: none;
+  .main-form__textarea {
+    width: 100%;
+  }
 }
 
 .main-form__button {
@@ -55,8 +65,116 @@
 
 .main-form__text-help {
   text-transform: uppercase;
+  text-align: center;
 }
 
 .main-form__text-help-icon {
   color: @accent-color;
+}
+
+@media (min-width: 660px) {
+  .main-form {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .main-form__list-wrapper {
+    padding: 40px 60px;
+  }
+
+  .main-form__user-date {
+    padding: 0;
+    order: 1;
+
+    .main-form__item {
+      display: flex;
+      align-items: center;
+
+      margin-bottom: 50px;
+    }
+  }
+
+  .main-form__app {
+    order: 2;
+  }
+
+  .main-form__user-contacts {
+    order: 3;
+
+    .main-form__item {
+      display: flex;
+      flex-direction: column-reverse;
+    }
+  }
+
+  .main-form__success {
+    order: 4;
+  }
+
+  .main-form__emotions {
+    order: 5;
+  }
+
+  .main-form__wrapper-button {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    order: 6;
+  }
+
+  .main-form__button {
+    margin: 0;
+  }
+}
+
+@media (min-width: 960px) {
+  .main-form {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+
+  .main-form__list-wrapper {
+    margin-bottom: 60px;
+  }
+
+  .main-form__user-date {
+    flex-basis: 435px;
+  }
+
+  .main-form__app {
+    flex-basis: 435px;
+  }
+
+  .main-form__user-contacts {
+    flex-basis: 100%;
+
+    .main-form__list {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+  }
+
+  .main-form__emotions {
+    flex-basis: 100%;
+  }
+
+  .main-form__success {
+    flex-basis: 100%;
+
+    padding: 40px 60px;
+
+    .main-form__list {
+      display: flex;
+      flex-direction: column;
+      flex-wrap: wrap;
+      align-content: space-around;
+      height: 130px;
+    }
+  }
+
+  .main-form__wrapper-button {
+    flex-basis: 100%;
+  }
 }
