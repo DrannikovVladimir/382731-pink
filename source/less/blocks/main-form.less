@@ -6,6 +6,8 @@
   padding: 0;
   margin: 0;
   margin-bottom: 40px;
+
+  border: none;
 }
 
 .main-form__list {
@@ -23,6 +25,9 @@
 
 .main-form__label {
   display: block;
+  margin-bottom: 10px;
+  padding-left: 20px;
+
   .main-text(14px, 30px);
   color: @accent-color;
   text-transform: uppercase;
@@ -30,12 +35,15 @@
 
 .main-form__input {
   width: 100%;
+  padding: 14px 20px;
 
   .other-text(18px, 30px);
+  border: 2px solid @border-color;
 }
 
 .main-form__subtitle {
-  margin-bottom: 40px;
+  padding-left: 35px;
+  padding-right: 35px;
 
   .main-text(14px, 18px);
   text-transform: uppercase;
@@ -45,16 +53,22 @@
 
 .main-form__checkbox-label,
 .main-form__radio-label {
+  padding-left: 40px;
   .other-text();
 }
 
 .main-form__message {
   margin-bottom: 50px;
+  padding: 0;
 
   text-align: left;
 
+  border: none;
+
   .main-form__textarea {
     width: 100%;
+
+    border: 2px solid @border-color;
   }
 }
 
@@ -77,19 +91,44 @@
     flex-direction: column;
   }
 
+  .form-wrapper__decription {
+    max-width: 500px;
+    margin: 0 auto;
+    margin-bottom: 70px;
+
+    .other-text();
+
+    span {
+      display: block;
+    }
+  }
+
   .main-form__list-wrapper {
     padding: 40px 60px;
+
+    border: 2px solid @border-color;
   }
 
   .main-form__user-date {
     padding: 0;
     order: 1;
 
+    border: none;
+
     .main-form__item {
       display: flex;
       align-items: center;
 
       margin-bottom: 50px;
+    }
+
+    .main-form__item:last-child {
+      margin-bottom: 0;
+    }
+
+    .main-form__label {
+      margin: 0;
+      margin-right: 20px;
     }
   }
 
@@ -104,6 +143,10 @@
       display: flex;
       flex-direction: column-reverse;
     }
+
+    .main-form__input {
+      margin-bottom: 10px;
+    }
   }
 
   .main-form__success {
@@ -111,7 +154,17 @@
   }
 
   .main-form__emotions {
+    padding: 40px 60px;
+
     order: 5;
+
+    .other-text();
+
+    border: 2px solid @border-color;
+  }
+
+  .main-form__textarea {
+    padding: 18px 15px;
   }
 
   .main-form__wrapper-button {
@@ -133,6 +186,18 @@
     justify-content: space-between;
   }
 
+  .form-wrapper__decription {
+    max-width: 780px;
+    margin: 0 auto;
+    margin-bottom: 70px;
+
+    .other-text();
+
+    span {
+      display: inline;
+    }
+  }
+
   .main-form__list-wrapper {
     margin-bottom: 60px;
   }
@@ -152,6 +217,10 @@
       display: flex;
       justify-content: space-between;
       align-items: center;
+    }
+
+    .main-form__input {
+      width: 375px;
     }
   }
 
