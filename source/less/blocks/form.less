@@ -1,7 +1,8 @@
 .form__wrapper {
   width: 320px;
   margin: 0 auto;
-  padding: 50px 20px;
+  margin-bottom: 60px;
+  padding-top: 91px;
 }
 
 .form-wrapper__decription {
@@ -17,11 +18,39 @@
 @media (min-width: 660px) {
   .form__wrapper {
     width: 660px;
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+
+  .form-wrapper__decription {
+    max-width: 500px;
+    margin: 0 auto;
+    margin-bottom: 70px;
+
+    .other-text();
+
+    span {
+      display: block;
+    }
   }
 }
 
 @media (min-width: 960px) {
   .form__wrapper {
     width: 960px;
+    padding-right: 10px;
+    padding-left: 10px;
+  }
+
+  .form-wrapper__decription {
+    max-width: 780px;
+    margin: 0 auto;
+    margin-bottom: 55px;
+
+    .other-text();
+
+    span {
+      display: inline;
+    }
   }
 }

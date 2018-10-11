@@ -15,7 +15,7 @@
           <a class="page-header__logo-link" href="index.html">
             <img class="page-header__logo-image" src="http://placehold.it/150x100" width="75" height="22" alt="Логотип">
           </a>
-          <button class="page-header__toggle" type="button">Открыть меню</button>
+          <button class="page-header__toggle" type="button"><span class="visually-hidden">Открыть меню</span></button>
         </div>
 
         <nav class="main-nav">
@@ -38,7 +38,7 @@
     </div>
 
     <div class="main-intro">
-      <h1 class="main-intro__title">Конкурс на самое<br>безбашенное<br>путешествие с Пинк</h1>
+      <h1 class="main-intro__title">Конкурс на самое<br class="main-intro--br-none"><span class="main-intro--space-yes"> </span>безбашенное<br>путешествие с Пинк</h1>
     </div>
   </header>
 
@@ -67,30 +67,30 @@
           </div>
 
           <fieldset class="main-form__list-wrapper main-form__success">
-            <legend class="main-form__subtitle">Ваши безбашенные<br> достижения в путешествии</legend>
+            <legend class="main-form__subtitle">Ваши безбашенные достижения в путешествии</legend>
             <ul class="main-form__list">
               <li class="main-form__item">
-                <input class="main-form__checkbox-input" id="selfieShark" type="checkbox" name="shark" value="shark" checked>
+                <input class="visually-hidden main-form__checkbox-input" id="selfieShark" type="checkbox" name="shark" value="shark" checked>
                 <label class="main-form__checkbox-label" for="selfieShark">Сделал селфи с акулой</label>
               </li>
               <li class="main-form__item">
-                <input class="main-form__checkbox-input" id="burnBeach" type="checkbox" name="beach" value="beach" checked>
+                <input class="visually-hidden main-form__checkbox-input" id="burnBeach" type="checkbox" name="beach" value="beach" checked>
                 <label class="main-form__checkbox-label" for="burnBeach">Обгорел на пляже</label>
               </li>
               <li class="main-form__item">
-                <input class="main-form__checkbox-input" id="seeNorris" type="checkbox" name="norris" value="norris">
+                <input class="visually-hidden main-form__checkbox-input" id="seeNorris" type="checkbox" name="norris" value="norris">
                 <label class="main-form__checkbox-label" for="seeNorris">Видел Чака Норриса</label>
               </li>
               <li class="main-form__item">
-                <input class="main-form__checkbox-input" id="buySouvenir" type="checkbox" name="souvenir" value="souvenir">
+                <input class="visually-hidden main-form__checkbox-input" id="buySouvenir" type="checkbox" name="souvenir" value="souvenir">
                 <label class="main-form__checkbox-label" for="buySouvenir">Накупил сувениров</label>
               </li>
               <li class="main-form__item">
-                <input class="main-form__checkbox-input" id="keepTower" type="checkbox" name="tower" value="tower" checked>
+                <input class="visually-hidden main-form__checkbox-input" id="keepTower" type="checkbox" name="tower" value="tower" checked>
                 <label class="main-form__checkbox-label" for="keepTower">Удержал башню</label>
               </li>
               <li class="main-form__item">
-                <input class="main-form__checkbox-input" id="smashHotel" type="checkbox" name="hotel" value="hotel">
+                <input class="visually-hidden main-form__checkbox-input" id="smashHotel" type="checkbox" name="hotel" value="hotel">
                 <label class="main-form__checkbox-label" for="smashHotel">Разгромил отель</label>
               </li>
             </ul>
@@ -99,11 +99,11 @@
           <fieldset class="main-form__list-wrapper main-form__user-contacts">
             <legend class="main-form__subtitle">Контактная информация</legend>
             <ul class="main-form__list">
-              <li class="main-form__item">
+              <li class="main-form__item main-form__item-phone">
                 <label class="main-form__label" for="userPhone">Номер телефона</label>
                 <input class="main-form__input" id="userPhone" type="text" placeholder="Номер, пожалуйста">
               </li>
-              <li class="main-form__item">
+              <li class="main-form__item main-form__item-email">
                 <label class="main-form__label" for="userEmail">Адрес почты</label>
                 <input class="main-form__input" id="userEmail" type="text" placeholder="Введите почту*">
               </li>
@@ -114,15 +114,15 @@
             <legend class="main-form__subtitle">С каким приложением путешествовали?</legend>
             <ul class="main-form__list">
               <li class="main-form__item">
-                <input class="main-form__radio-input" id="radioIos" type="radio" name="value-os" value="ios" checked>
+                <input class="visually-hidden main-form__radio-input" id="radioIos" type="radio" name="value-os" value="ios" checked>
                 <label  class="main-form__radio-label" for="radioIos">Pink для IOS</label>
               </li>
               <li class="main-form__item">
-                <input class="main-form__radio-input" id="radioAndroid" type="radio" name="value-os" value="android">
-                <label  class="main-form__radio-label" for="radioAndroid">Pink для Android</label>
+                <input class="visually-hidden main-form__radio-input" id="radioAndroid" type="radio" name="value-os" value="android">
+                <label  class="main-form__radio-label" for="radioAndroid">Pink на Android</label>
               </li>
               <li class="main-form__item">
-                <input class="main-form__radio-input" id="radioWindows" type="radio" name="value-os" value="windows">
+                <input class="visually-hidden main-form__radio-input" id="radioWindows" type="radio" name="value-os" value="windows">
                 <label  class="main-form__radio-label" for="radioWindows">Windows Phone</label>
               </li>
             </ul>
@@ -130,7 +130,7 @@
 
           <fieldset class="main-form__message main-form__emotions">
             <legend class="main-form__subtitle">Опишите свои эмоции</legend>
-            <textarea class="main-form__textarea" rows="5" name="message" placeholder="Можно прям в красках, не стесняясь в выражениях"></textarea>
+            <textarea class="main-form__textarea" rows="4" name="message" placeholder="Можно прям в красках, не стесняясь в выражениях"></textarea>
           </fieldset>
 
           <div class="main-form__wrapper-button">
