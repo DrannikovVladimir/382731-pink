@@ -1,7 +1,11 @@
 .main-footer {
-  padding: 40px 20px;
-
   text-align: center;
+}
+
+.main-footer__wrapper {
+  width: 320px;
+  margin: 0 auto;
+  padding: 0 20px;
 }
 
 .main-footer__logo-link {
@@ -12,4 +16,24 @@
 
 .main-footer__list {
   margin-bottom: 35px;
+}
+
+@media (min-width: 660px) {
+  .main-footer__wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    width: 660px;
+  }
+
+  .main-footer__logo-link {
+    margin: 0;
+  }
+}
+
+@media (min-width: 960px) {
+  .main-footer__wrapper {
+    width: 960px;
+  }
 }

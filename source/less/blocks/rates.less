@@ -1,27 +1,63 @@
 .rates {
   padding-bottom: 40px;
+
+  overflow: hidden;
+
   text-align: center;
 }
 
+.rates__wrapper {
+  display: flex;
+  justify-content: center;
+
+  width: 320;
+  margin: 0 auto;
+}
+
 .rates__list {
-  margin: 0 auto 40px;
+  margin: 0 auto 30px;
+  margin-left: -86%;
+
+  border-collapse: collapse;
 }
 
 .rates__header {
   color: @bg-main-color;
   text-align: center;
-
-  background-color: @basic-color;
 }
 
 .rates__item {
   text-align: left;
+  padding: 15px;
+
+  .main-text(14px, 30px);
+  text-transform: uppercase;
 
   border-bottom: 2px solid @border-color;
+  border-left: 2px solid @border-color;
+
+  &:last-child {
+    border-right: 2px solid @border-color;
+  }
+
+  &--current {
+    border-top: 2px solid @border-color;
+  }
 }
 
 .rates__item-title {
   min-width: 280px;
+  padding: 20px;
+
+  text-transform: uppercase;
+
+  background-color: @basic-color;
+  border-left: 2px solid @border-color;
+
+  &:first-child {
+    background-color: @bg-main-color;
+    border-left-color: @bg-main-color;
+  }
 }
 
 .rates__title-name {
@@ -32,4 +68,82 @@
 .rates__title-price {
   .text-light();
   .other-text(24px, 30px)
+}
+
+@media (max-width: 650px) {
+  .rates__item-filter {
+    &::before {
+      content: attr(filter) "";
+    }
+  }
+
+  .rates__item-smile {
+    &::before {
+      content: attr(smile) "";
+    }
+  }
+
+  .rates__item-comment {
+    &::before {
+      content: attr(comment) "";
+    }
+  }
+}
+
+@media (min-width: 660px) {
+  .rates__wrapper {
+    width: 660px;
+  }
+
+  .rates__list {
+    margin: 0;
+  }
+
+  .rates__title-name {
+    .other-text(16px, 30px);
+  }
+
+  .rates__title-price {
+    .other-text(18px, 30px)
+  }
+
+  .rates__item {
+    padding: 10px;
+
+    text-transform: inherit;
+  }
+
+  .rates__item-title {
+    min-width: 150px;
+    padding: 15px;
+  }
+
+  .rates__toggles {
+    display: none;
+  }
+}
+
+@media (min-width: 960px) {
+  .rates__wrapper {
+    width: 960px;
+  }
+
+  .rates__item {
+    padding: 15px 20px;
+
+    .other-text(18px, 30px);
+  }
+
+  .rates__title-name {
+    .other-text(18px, 30px);
+  }
+
+  .rates__title-price {
+    .other-text(24px, 30px)
+  }
+
+  .rates__item-title {
+    min-width: 233px;
+    padding: 20px;
+  }
 }

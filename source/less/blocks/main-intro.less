@@ -3,15 +3,40 @@
 
   color: @bg-main-color;
   text-align: center;
-
-  background-color: @basic-color;
-  background-image: url("../../img/bg-back-mobile@1x.jpg");
-  background-position: 50% 50%;
-  background-repeat: no-repeat;
 }
 
 .main-intro__title {
   margin: 0;
   .text-light();
-  .other-text(24px, 34px)
+  .other-text(24px, 34px);
+}
+
+@media (min-width: 660px) {
+  .main-intro {
+    padding-top: 69px;
+    padding-bottom: 78px;
+
+    &--space-yes {
+      display: none;
+    }
+  }
+
+  .main-intro__title {
+    .other-text(50px, 61px);
+  }
+}
+
+@media (min-width: 960px) {
+  .main-intro {
+    padding-top: 63px;
+    padding-bottom: 99px;
+
+    &--br-none {
+      display: none;
+    }
+  }
+
+  .main-intro__title {
+    .other-text(50px, 62px);
+  }
 }

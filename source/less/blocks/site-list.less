@@ -1,6 +1,7 @@
 .site-list {
   margin: 0;
   padding: 0;
+
   .other-text(18px, 32px);
   .text-bold();
   text-transform: uppercase;
@@ -16,8 +17,27 @@
   padding: 15px 0;
 
   border-bottom: 1px solid black;
+  border-top: 1px solid rgba(255, 255, 255, 0.15);
 }
 
 .site-list__link {
   color: @bg-main-color;
+}
+
+@media (min-width: 960px) {
+  .site-list {
+    display: flex;
+    width: 620px;
+    justify-content: space-between;
+
+    .other-text(18px, 18px);
+    .text-normal();
+    text-transform: inherit;
+
+    background-color: transparent;
+  }
+
+  .site-list__item {
+    border: none;
+  }
 }
