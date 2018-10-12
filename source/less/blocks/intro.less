@@ -1,5 +1,5 @@
 .intro {
-  padding: 425px 0 35px;
+  // padding: 425px 0 35px;
 
   text-align: center;
   color: @bg-main-color;
@@ -13,10 +13,6 @@
   margin: 0 auto;
   padding: 0 20px;
   width: 320px;
-}
-
-.intro__title {
-  display: none;
 }
 
 .intro__list {
@@ -41,6 +37,16 @@
 
   border: 3px solid @bg-main-color;
   border-radius: 100px;
+
+  &:hover,
+  &:focus {
+    color: @accent-color;
+    background-color: @bg-main-color;
+  }
+
+  &:active {
+    color: rgba(210, 40, 86, 0.3);
+  }
 }
 
 .intro__description {
@@ -100,6 +106,7 @@
 
   .intro__wrapper {
     width: 960px;
+    padding: 0 10px;
   }
 
   .intro__title {
