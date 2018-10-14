@@ -1,12 +1,17 @@
 .features {
-  padding: 40px 0 280px;
+  padding: 40px 0 277px;
 
   text-align: center;
+  // iphone-screen-mobile@1x
 
-  background-color: @bg-main-color;
-  background-image: url("../img/iphone-screen-mobile@1x.png");
-  background-position: center bottom -45px;
+  background-color: @bg-extra-color;
+  background-image: url("../img/iphone-screen-mobile@1x.png"),
+    url("../img/bg-triangle-white.svg");
+  background-position: center bottom -42px,
+    center top;
   background-repeat: no-repeat;
+  background-size: auto,
+    auto 468px;
 }
 
 .features__wrapper {
@@ -25,11 +30,11 @@
   .main-text(24px, 30px);
 
   &:first-of-type {
-    margin-bottom: 35px;
+    margin-bottom: 28px;
   }
 
   &:last-of-type {
-    margin-bottom: 100px;
+    margin-bottom: 120px;
   }
 }
 
@@ -40,16 +45,19 @@
   list-style: none;
 }
 
+.features__item {
+  margin-bottom: 40px;
+}
+
 .features__item-title {
   margin: 0;
-  margin-bottom: 15px;
+  margin-bottom: 18px;
 
   .other-text(18px, 10px);
 }
 
 .features__item-text {
   margin: 0;
-  margin-bottom: 35px;
 }
 
 @media (min-width: 660px) {

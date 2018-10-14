@@ -1,9 +1,10 @@
 .rates {
-  padding-bottom: 40px;
-
+  padding-bottom: 47px;
   overflow: hidden;
 
   text-align: center;
+
+  background-color: @bg-extra-color;
 }
 
 .rates__wrapper {
@@ -15,8 +16,7 @@
 }
 
 .rates__list {
-  margin: 0 auto 30px;
-  margin-left: -86%;
+  margin: 0 auto 42px;
 
   border-collapse: collapse;
 }
@@ -28,7 +28,9 @@
 
 .rates__item {
   text-align: left;
-  padding: 15px;
+  padding-top: 16px;
+  padding-bottom: 14px;
+  padding-left: 22px;
 
   .main-text(14px, 30px);
   text-transform: uppercase;
@@ -40,14 +42,57 @@
     border-right: 2px solid @border-color;
   }
 
+  &--hit {
+    position: relative;
+
+    background-image: url("../img/bg-hit.svg");
+    background-repeat: no-repeat;
+    background-position: left top;
+  }
+
+  &--hit::before {
+    content: "хит";
+
+    position: absolute;
+    top: 12px;
+    left: 12px;
+    transform: rotate(-45deg);
+
+    .main-text(14px, 30px);
+    .text-normal();
+
+    z-index: 2;
+  }
+
   &--current {
     border-top: 2px solid @border-color;
+  }
+
+  &--mobile-none {
+    display: none;
+  }
+
+  &--yes {
+    background-image: url("../img/icon-yes.svg");
+    background-repeat: no-repeat;
+    background-position: right 17px center;
+    background-size: 31px 21px;
+  }
+
+  &--no {
+    background-image: url("../img/icon-no.svg");
+    background-repeat: no-repeat;
+    background-position: right 19px center;
+    background-size: 27px 26px;
   }
 }
 
 .rates__item-title {
   min-width: 280px;
-  padding: 20px;
+  padding-top: 18px;
+  padding-right: 20px;
+  padding-bottom: 20px;
+  padding-left: 20px;
 
   text-transform: uppercase;
 
@@ -68,6 +113,50 @@
 .rates__title-price {
   .text-light();
   .other-text(24px, 30px)
+}
+
+.rates__toggles {
+  display: flex;
+  width: 62px;
+  height: 12px;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0 auto;
+}
+
+.rates__toggles-item {
+  position: relative;
+
+  display: block;
+  width: 12px;
+  height: 12px;
+
+  border: none;
+  background-color: transparent;
+
+  &::before {
+    content: "";
+
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    display: block;
+    width: 12px;
+    height: 12px;
+
+    background-color: @basic-color;
+    border: 3px solid @bg-extra-color;
+    border-radius: 6px;
+
+    opacity: 0.3;
+  }
+
+  &--active::before {
+    background-color: @bg-main-color;
+    border-color: @basic-color;
+    opacity: 1;
+  }
 }
 
 @media (max-width: 650px) {

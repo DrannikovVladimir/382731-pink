@@ -1,17 +1,19 @@
 .gallery {
-  padding: 50px 0;
+  padding-top: 45px;
+  padding-bottom: 8px;
 }
 
 .gallery__wrapper {
   width: 320px;
   margin: 0 auto;
   padding: 0 20px;
+  padding-bottom: 20px;
 }
 
 .gallery__description {
   width: 250px;
   margin: 0 auto;
-  margin-bottom: 55px;
+  margin-bottom: 30px;
 
   text-align: center;
   .main-text(14px, 30px);
@@ -31,23 +33,42 @@
   background-color: @bg-extra-color;
 }
 
-.gallery__text {
-  padding: 22px 17px 26px;
+.gallery__text,
+.gallery__hit-text {
+  padding-top: 18px;
+  padding-right: 19px;
+  padding-bottom: 20px;
+  padding-left: 19px;
+
+  background-color: @bg-extra-color;
 }
 
-.gallery__hit-link {
+.gallery__link {
   display: flex;
   justify-content: center;
 }
 
-.gallery__user-name {
+
+.gallery__hit-image {
+  width: 320px;
+  height: 137px;
+}
+
+.gallery__image {
+  width: 280px;
+  height: 180px;
+}
+
+.gallery__user-name,
+.gallery__hit-name {
   margin: 0;
-  margin-bottom: 5px;
+  margin-bottom: -1px;
 
   .text-bold();
 }
 
-.gallery__user-time {
+.gallery__user-time,
+.gallery__hit-time {
   margin: 0;
 
   .text-light();
@@ -55,17 +76,24 @@
   text-transform: uppercase;
 }
 
-.gallery__user-photo-description {
+.gallery__user-photo-description,
+.gallery__hit-photo-description {
   margin: 0;
   margin-bottom: 10px;
 }
 
-.gallery__user-photo-like {
+.gallery__user-photo-like,
+.gallery__hit-photo-like {
   margin: 0;
+  padding-left: 32px;
 
   color: @accent-color;
   text-transform: uppercase;
   .other-text(12px, 24px);
+
+  background-image: url("../img/icon-heart.svg");
+  background-repeat: no-repeat;
+  background-position: left center;
 }
 
 .gallery__slogan {
@@ -74,38 +102,84 @@
 }
 
 @media (min-width: 660px) {
+  .gallery {
+    padding-top: 92px;
+  }
+
   .gallery__wrapper {
     width: 660px;
   }
 
   .gallery__description {
     width: 500px;
+    margin-bottom: 56px;
 
     .other-text();
   }
 
-  .gallery__list {
-    display: flex;
-    justify-content: space-between;
-    flex-wrap: wrap;
-  }
-
-  .gallery__item {
-    flex-basis: 300px;
-  }
-
-  .gallery__slogan {
-    .other-text(18px, 30px);
+  .gallery__hit-image {
+    width: 700px;
+    height: 509px;
   }
 
   .gallery__hit-text {
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
+    padding-top: 24px;
+    padding-left: 29px;
+    padding-right: 26px;
+    padding-bottom: 16px;
   }
 
   .gallery__hit-photo-description {
     order: 2;
+  }
+
+  .gallery__hit-photo-like {
+    padding-left: 0;
+    padding-right: 32px;
+    background-position: right center;
+  }
+
+  .gallery__list {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    padding-top: 30px;
+  }
+
+  .gallery__item {
+    flex-basis: 300px;
+  }
+
+  .gallery__image {
+    width: 300px;
+    height: 300px;
+  }
+
+  .gallery__text {
+    display: flex;
+    flex-direction: column;
+    min-height: 155px;
+    padding-top: 23px;
+    padding-left: 29px;
+    padding-bottom: 24px;
+  }
+
+  .gallery__user-photo-like {
+    margin: 0;
+    margin-top: auto;
+    padding-left: 0;
+    padding-right: 50px;
+
+    background-image: url("../img/icon-heart.svg");
+    background-repeat: no-repeat;
+    background-position: right 12px center;
+  }
+
+  .gallery__slogan {
+    margin-bottom: 40px;
   }
 }
 
@@ -117,6 +191,60 @@
   }
 
   .gallery__description {
-    .main-text();
+    width: 590px;
+    margin-bottom: 68px;
+
+    .other-text();
+  }
+
+  .gallery__list {
+    margin-bottom: 0;
+  }
+
+  .gallery__item {
+    margin-bottom: 52px;
+  }
+
+  .gallery__hit-image {
+    width: 1200px;
+    height: 506px;
+  }
+
+  .gallery__hit-text {
+    padding-top: 23px;
+    padding-right: 30px;
+    padding-left: 27px;
+  }
+
+  .gallery__image {
+    width: 300px;
+    height: 400px;
+  }
+
+  .gallery__text {
+    display: flex;
+    flex-direction: column;
+    min-height: 155px;
+    padding-top: 23px;
+    padding-left: 28px;
+    padding-bottom: 24px;
+  }
+
+  .gallery__user-photo-like {
+    margin: 0;
+    margin-top: auto;
+    padding-left: 0;
+    padding-right: 50px;
+
+    background-image: url("../img/icon-heart.svg");
+    background-repeat: no-repeat;
+    background-position: right 12px center;
+  }
+
+  .gallery__slogan {
+    margin-top: 9px;
+    margin-bottom: 38px;
+
+    .other-text();
   }
 }
