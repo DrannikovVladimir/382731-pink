@@ -1,6 +1,4 @@
 .intro {
-  // min-height: 668px;
-
   text-align: center;
   color: @bg-main-color;
 }
@@ -70,10 +68,11 @@
 .intro__button {
   margin: 0 auto;
   margin-bottom: 30px;
-  padding: 16px 10px;
+  padding-top: 15px;
+  padding-bottom: 16px;
 
   display: block;
-  max-width: 280px;
+  width: 280px;
 
   .text-bold();
   color: @bg-main-color;
@@ -102,40 +101,42 @@
 @media (min-width: 660px) {
   .intro {
     display: flex;
-    padding: 100px 0 110px;
-
-    background-image: url("../img/iphone-hand-tablet@1x.png");
-    background-position: right bottom;
-    background-color: transparent;
-    background-repeat: no-repeat;
+    min-height: 618px
   }
 
   .intro__wrapper {
     display: flex;
-
     width: 660px;
+    padding-top: 68px;
+
+    background-image: url("../img/iphone-hand-tablet@1x.png");
+    background-position: center bottom;
   }
 
   .intro-inner__wrapper {
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
 
     max-width: 300px;
-    min-height: 410px;
   }
 
   .intro__title {
     display: block;
     margin: 0;
+    margin-bottom: 32px;
 
     color: @bg-main-color;
     .text-light();
-    .other-text(40px, 50px);
+    .other-text(40px, 48px);
+  }
+
+  .intro__list {
+    margin-bottom: 15px;
   }
 
   .intro__button {
-    width: 300px;
+    width: 100%;
+    margin-bottom: 44px;
   }
 
   .intro__description {
@@ -145,23 +146,31 @@
 
 @media (min-width: 960px) {
   .intro {
-    min-height: 740px;
-    background-image: url("../img/iphone-hand-desktop@1x.png");
-    background-position: right -100px bottom;
+    min-height: 743px;
   }
 
   .intro__wrapper {
     width: 960px;
     padding: 0 10px;
+    padding-top: 86px;
+
+    background-image: url("../img/iphone-hand-desktop@1x.png");
+    background-position: right -115px bottom;
   }
 
   .intro__title {
-    margin-bottom: 25px;
+    margin-bottom: 51px;
 
     .other-text(50px, 60px);
   }
 
   .intro__button {
-    .other-text(18px, 18px);
+    margin-bottom: 66px;
+
+    .other-text(21px, 18px);
+  }
+
+  .intro__list {
+    margin-bottom: 33px;
   }
 }
