@@ -13,7 +13,7 @@
 .gallery__description {
   width: 250px;
   margin: 0 auto;
-  margin-bottom: 30px;
+  margin-bottom: 29px;
 
   text-align: center;
   .main-text(14px, 30px);
@@ -22,7 +22,7 @@
 .gallery__list {
   margin: 0;
   padding: 0;
-  margin-bottom: 45px;
+  margin-bottom: 43px;
 
   list-style: none;
 }
@@ -33,7 +33,6 @@
   background-color: @bg-extra-color;
 }
 
-.gallery__text,
 .gallery__hit-text {
   padding-top: 18px;
   padding-right: 19px;
@@ -43,9 +42,25 @@
   background-color: @bg-extra-color;
 }
 
-.gallery__link {
+.gallery__text {
+  padding-top: 11px;
+  padding-right: 19px;
+  padding-bottom: 20px;
+  padding-left: 19px;
+
+  background-color: @bg-extra-color;
+}
+
+.gallery__hit-wrapper {
+  width: 320px;
+  margin: 0 auto;
+  padding: 0;
+}
+
+.gallery__hit-link {
   display: flex;
   justify-content: center;
+  margin-bottom: -7px;
 }
 
 
@@ -117,6 +132,10 @@
     .other-text();
   }
 
+  .gallery__hit-wrapper {
+    width: 100%;
+  }
+
   .gallery__hit-image {
     width: 700px;
     height: 509px;
@@ -129,7 +148,7 @@
     padding-top: 24px;
     padding-left: 29px;
     padding-right: 26px;
-    padding-bottom: 16px;
+    padding-bottom: 14px;
   }
 
   .gallery__hit-photo-description {
@@ -147,6 +166,7 @@
     justify-content: space-between;
     flex-wrap: wrap;
     padding-top: 30px;
+    margin-bottom: 45px;
   }
 
   .gallery__item {
@@ -161,10 +181,10 @@
   .gallery__text {
     display: flex;
     flex-direction: column;
-    min-height: 155px;
-    padding-top: 23px;
+    min-height: 148px;
+    padding-top: 17px;
     padding-left: 29px;
-    padding-bottom: 24px;
+    padding-bottom: 22px;
   }
 
   .gallery__user-photo-like {
@@ -180,10 +200,12 @@
 
   .gallery__slogan {
     margin-bottom: 40px;
+
+    .other-text();
   }
 }
 
-@media (min-width: 990px) {
+@media (min-width: 960px) {
   .gallery__wrapper {
     padding-left: 10px;
     padding-right: 10px;
@@ -202,16 +224,20 @@
   }
 
   .gallery__item {
-    margin-bottom: 52px;
+    margin-bottom: 55px;
+  }
+
+  .gallery__hit-wrapper {
+    width: 100%;
   }
 
   .gallery__hit-image {
-    width: 1200px;
+    width: 100%;
     height: 506px;
   }
 
   .gallery__hit-text {
-    padding-top: 23px;
+    padding-top: 24px;
     padding-right: 30px;
     padding-left: 27px;
   }
@@ -224,10 +250,10 @@
   .gallery__text {
     display: flex;
     flex-direction: column;
-    min-height: 155px;
-    padding-top: 23px;
+    min-height: 147px;
+    padding-top: 17px;
     padding-left: 28px;
-    padding-bottom: 24px;
+    padding-bottom: 21px;
   }
 
   .gallery__user-photo-like {
@@ -242,7 +268,7 @@
   }
 
   .gallery__slogan {
-    margin-top: 9px;
+    margin-top: 5px;
     margin-bottom: 38px;
 
     .other-text();

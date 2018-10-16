@@ -14,9 +14,13 @@
         <div class="page-header__wrapper-logo-border">
           <div class="page-header__wrapper-logo">
             <a class="page-header__logo-link">
-              <img class="page-header__logo-image" src="../img/logo-pink-white-mobile.svg" width="75" height="22" alt="Логотип">
+              <picture>
+                <source media="(min-width: 960px)" srcset="../img/logo-pink-white-desktop.svg">
+                <source media="(min-width: 660px)" srcset="../img/logo-pink-white-tablet.svg">
+                <img class="page-header__logo-image" src="../img/logo-pink-white-mobile.svg" alt="Логотип">
+              </picture>
             </a>
-            <button class="page-header__toggle" type="button"><span class="visually-hidden">Открыть меню</span></button>
+            <!-- <button class="page-header__toggle" type="button"><span class="visually-hidden">Открыть меню</span></button> -->
           </div>
         </div>
 
@@ -68,7 +72,7 @@
   </header>
 
   <main>
-    <h1 class="visually-hidden">Мобильное приложение Пинк</h1>
+    <!-- <h1 class="visually-hidden">Мобильное приложение Пинк</h1> -->
 
     <section class="features">
       <div class="features__wrapper">
@@ -81,14 +85,35 @@
           <div class="features-list__wrapper">
             <ul class="features__list">
               <li class="features__item">
+                <div class="features__image">
+                  <picture>
+                    <source media="(min-width: 960px)" srcset="../img/iphone-screen-1-desktop@1x.png">
+                    <source media="(min-width: 660px)" srcset="../img/iphone-screen-1-tablet@1x.png">
+                    <img class="gallery__hit-image" src="../img/iphone-screen-mobile@1x.png" alt="">
+                  </picture>
+                </div>
                 <h3 class="features__item-title">Поднимает настроение</h3>
                 <p class="features__item-text">Приложение позволит вам победить осеннюю хандру и депрессию буквально в несколько кликов!</p>
               </li>
               <li class="features__item">
+                <div class="features__image">
+                  <picture>
+                    <source media="(min-width: 960px)" srcset="../img/iphone-screen-2-desktop@1x.png">
+                    <source media="(min-width: 660px)" srcset="../img/iphone-screen-2-tablet@1x.png">
+                    <img class="gallery__hit-image" src="../img/iphone-screen-mobile@1x.png" alt="">
+                  </picture>
+                </div>
                 <h3 class="features__item-title">Меняет мир вокруг</h3>
                 <p class="features__item-text">Сделайте снимок и украсьте его смайликом или текстовой подписью, чтобы усилить эффект</p>
               </li>
               <li class="features__item">
+                <div class="features__image">
+                  <picture>
+                    <source media="(min-width: 960px)" srcset="../img/iphone-screen-3-desktop@1x.png">
+                    <source media="(min-width: 660px)" srcset="../img/iphone-screen-3-tablet@1x.png">
+                    <img class="gallery__hit-image" src="../img/iphone-screen-mobile@1x.png" alt="Панорама дня">
+                  </picture>
+                </div>
                 <h3 class="features__item-title">Заводит новых друзей</h3>
                 <p class="features__item-text">Ставьте лайки, комментируйте, делитесь фотографиями с друзьями и заводите новых</p>
               </li>
@@ -206,7 +231,11 @@
 
     <section class="map">
       <div class="map__wrapper">
-        <img class="map__image" src="../img/bg-map-desktop@1x.jpg" alt="ул. Большая Конюшенная, 19/8">
+        <picture>
+          <source media="(min-width: 960px)" srcset="../img/bg-map-desktop@1x.jpg">
+          <source media="(min-width: 660px)" srcset="../img/bg-map-tablet@1x.jpg">
+          <img class="map__image" src="../img/bg-map-mobile@1x.png" alt="ул. Большая Конюшенная, 19/8">
+        </picture>
       </div>
     </section>
   </main>
@@ -214,7 +243,10 @@
   <footer class="main-footer footer-index">
     <div class="main-footer__wrapper">
       <a class="main-footer__logo-link footer-logo" href="index.html">
-        <img class="footer-logo__image" src="../img/logo-pink-white-tablet.svg" alt="Логотип">
+        <picture>
+          <source media="(min-width: 960px)" srcset="../img/logo-pink-blue-desktop.svg">
+          <img class="footer-logo__image"  src="../img/logo-pink-blue-mobile.svg" alt="Логотип">
+        </picture>
       </a>
 
       <ul class="main-footer__social social">

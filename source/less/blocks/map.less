@@ -1,5 +1,5 @@
 .map {
-  height: 200px;
+  height: 220px;
   overflow: hidden;
 
   text-align: center;
@@ -20,13 +20,13 @@
     transform: translateX(-50%);
 
     display: block;
-    width: 320px;
-    height: 34px;
+    width: 1200px;
+    height: 123px;
 
     background-image: url("../img/bg-triangle-white-footer.svg");
     background-repeat: no-repeat;
-    background-position: center top;
-    background-size: 320px 34px;
+    background-position: center top -78px;
+    background-size: 1200px 123px;
   }
 }
 
@@ -39,31 +39,24 @@
     width: 660px;
 
     &::before {
-      width: 660px;
-      height: 70px;
-
-      top: -2px;
-
-      background-size: 660px 70px;
+      background-position: center top -52px;
     }
   }
 }
 
-@media (min-width: 990px) {
+@media (min-width: 960px) {
   .map {
-    height: 505px;
+    height: 495px;
   }
 
   .map__wrapper {
     width: 960px;
 
     &::before {
-      width: 960px;
-      height: 105px;
+      width: 1439px;
 
-      top: -3px;
-
-      background-size: 960px 105px;
+      background-position: center top -10px;
+      background-size: 1439px 123px;
     }
   }
 

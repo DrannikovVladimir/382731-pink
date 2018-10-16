@@ -13,9 +13,13 @@
       <div class="page-header__wrapper">
         <div class="page-header__wrapper-logo">
           <a class="page-header__logo-link" href="index.html">
-            <img class="page-header__logo-image" src="http://placehold.it/150x100" width="75" height="22" alt="Логотип">
+            <picture>
+              <source media="(min-width: 960px)" srcset="../img/logo-pink-white-desktop.svg">
+              <source media="(min-width: 660px)" srcset="../img/logo-pink-white-tablet.svg">
+              <img class="page-header__logo-image" src="../img/logo-pink-white-mobile.svg" alt="Логотип">
+            </picture>
           </a>
-          <button class="page-header__toggle" type="button"><span class="visually-hidden">Открыть меню</span></button>
+          <!-- <button class="page-header__toggle" type="button"><span class="visually-hidden">Открыть меню</span></button> -->
         </div>
 
         <nav class="main-nav">
@@ -43,16 +47,21 @@
   </header>
 
   <main>
-
     <section class="gallery">
       <div class="gallery__wrapper">
         <h2 class="visually-hidden">Галерея с фотографиями пользователей</h2>
         <p class="gallery__description">Взгляните на фотографии, которые выкладывают пользователи! Видите, как не хватает ваших?</p>
       </div>
 
-      <a class="gallery__link" href="photo.html">
-        <img class="gallery__hit-image" src="http://placehold.it/150x100" alt="Описание фотографий">
-      </a>
+      <div class="gallery__hit-wrapper">
+        <a class="gallery__hit-link" href="photo.html">
+          <picture>
+            <source media="(min-width: 960px)" srcset="../img/panorama-desktop@1x.jpg">
+            <source media="(min-width: 660px)" srcset="../img/panorama-tablet@1x.jpg">
+            <img class="gallery__hit-image" src="../img/panorama-mobile@1x.jpg" alt="Панорама дня">
+          </picture>
+        </a>
+      </div>
 
       <div class="gallery__wrapper">
         <div class="gallery__hit-text">
@@ -66,7 +75,11 @@
         <ul class="gallery__list">
           <li class="gallery__item">
             <a class="gallery__link" href="photo.html">
-              <img class="gallery__image" src="http://placehold.it/150x100" alt="Описание фотографий">
+              <picture>
+                <source media="(min-width: 960px)" srcset="../img/photo-car-desktop@1x.jpg">
+                <source media="(min-width: 660px)" srcset="../img/photo-car-tablet@1x.jpg">
+                <img class="gallery__image" src="../img/photo-car-mobile@1x.jpg" alt="Машина">
+              </picture>
             </a>
             <div class="gallery__text">
               <p class="gallery__user-name">Левон<span class="gallery__user-time"> (5 часов назад)</span></p>
@@ -76,7 +89,11 @@
           </li>
           <li class="gallery__item">
             <a class="gallery__link" href="photo.html">
-              <img class="gallery__image" src="http://placehold.it/150x100" alt="Описание фотографий">
+              <picture>
+                <source media="(min-width: 960px)" srcset="../img/photo-drumset-desktop@1x.jpg">
+                <source media="(min-width: 660px)" srcset="../img/photo-drumset-tablet@1x.jpg">
+                <img class="gallery__image" src="../img/photo-drumset-mobile@1x.jpg" alt="Барабаны">
+              </picture>
             </a>
             <div class="gallery__text">
               <p class="gallery__user-name">Антон<span class="gallery__user-time"> (12 часов назад)</span></p>
@@ -86,7 +103,11 @@
           </li>
           <li class="gallery__item">
             <a class="gallery__link" href="photo.html">
-              <img class="gallery__image" src="http://placehold.it/150x100" alt="Описание фотографий">
+              <picture>
+                <source media="(min-width: 960px)" srcset="../img/photo-window-desktop@1x.jpg">
+                <source media="(min-width: 660px)" srcset="../img/photo-window-tablet@1x.jpg">
+                <img class="gallery__image" src="../img/photo-window-mobile@1x.jpg" alt="Окно">
+              </picture>
             </a>
             <div class="gallery__text">
               <p class="gallery__user-name">Борис<span class="gallery__user-time"> (20 часов назад)</span></p>
@@ -96,7 +117,11 @@
           </li>
           <li class="gallery__item">
             <a class="gallery__link" href="photo.html">
-              <img class="gallery__image" src="http://placehold.it/150x100" alt="Описание фотографий">
+              <picture>
+                <source media="(min-width: 960px)" srcset="../img/photo-fair-desktop@1x.jpg">
+                <source media="(min-width: 660px)" srcset="../img/photo-fair-tablet@1x.jpg">
+                <img class="gallery__image" src="../img/photo-fair-mobile@1x.jpg" alt="Ярмарка">
+              </picture>
             </a>
             <div class="gallery__text">
               <p class="gallery__user-name">Сергей<span class="gallery__user-time"> (25 часов назад)</span></p>
@@ -106,7 +131,11 @@
           </li>
           <li class="gallery__item">
             <a class="gallery__link" href="photo.html">
-              <img class="gallery__image" src="http://placehold.it/150x100" alt="Описание фотографий">
+              <picture>
+                <source media="(min-width: 960px)" srcset="../img/photo-pov-desktop@1x.jpg">
+                <source media="(min-width: 660px)" srcset="../img/photo-pov-tablet@1x.jpg">
+                <img class="gallery__image" src="../img/photo-pov-mobile@1x.jpg" alt="Высота">
+              </picture>
             </a>
             <div class="gallery__text">
               <p class="gallery__user-name">Максим<span class="gallery__user-time"> (40 часов назад)</span></p>
@@ -116,7 +145,11 @@
           </li>
           <li class="gallery__item">
             <a class="gallery__link" href="photo.html">
-              <img class="gallery__image" src="http://placehold.it/150x100" alt="Описание фотографий">
+              <picture>
+                <source media="(min-width: 960px)" srcset="../img/photo-wing-desktop@1x.jpg">
+                <source media="(min-width: 660px)" srcset="../img/photo-wing-tablet@1x.jpg">
+                <img class="gallery__image" src="../img/photo-wing-mobile@1x.jpg" alt="Ветер">
+              </picture>
             </a>
             <div class="gallery__text">
               <p class="gallery__user-name">Надежда<span class="gallery__user-time"> (45 часов назад)</span></p>
@@ -134,7 +167,11 @@
         <h2 class="visually-hidden">Обработать и запостить фотографию</h2>
         <form class="photo-post__form" action="https://echo.htmlacademy.ru" method="post">
           <div class="photo-post__image-wrapper">
-            <img class="photo-post__image" src="http://placehold.it/150x100" alt="Изображение для обработки">
+            <picture>
+              <source media="(min-width: 960px)" srcset="../img/photo-road-desktop@1x.jpg">
+              <source media="(min-width: 660px)" srcset="../img/photo-road-tablet@1x.jpg">
+              <img class="photo-post__image" src="../img/photo-road-mobile@1x.jpg" alt="Дорога">
+            </picture>
           </div>
 
           <div class="photo-post__control">
@@ -189,7 +226,10 @@
   <footer class="main-footer">
     <div class="main-footer__wrapper">
       <a class="main-footer__logo-link footer-logo" href="index.html">
-        <img class="footer-logo__image"  src="img/logo-pink-blue-mobile.svg" width="147" height="40" alt="Логотип">
+        <picture>
+          <source media="(min-width: 960px)" srcset="../img/logo-pink-blue-desktop.svg">
+          <img class="footer-logo__image"  src="../img/logo-pink-blue-mobile.svg" alt="Логотип">
+        </picture>
       </a>
 
       <ul class="main-footer__list social">

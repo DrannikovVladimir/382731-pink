@@ -10,6 +10,9 @@
   width: 320px;
   margin: 0 auto;
   padding: 0 20px;
+  min-height: 80px;
+
+  // border: 1px solid red;
 }
 
 .main-footer__logo-link {
@@ -19,13 +22,21 @@
 }
 
 .main-footer__list {
-  margin-bottom: 30px;
+  margin-bottom: 28px;
+}
+
+.main-footer__copyright {
+  margin-top: 27px;
 }
 
 @media (min-width: 660px) {
   .main-footer {
-    padding-top: 40px;
+    padding-top: 25px;
     padding-bottom: 35px;
+
+    &--form-indent {
+      padding-top: 52px;
+    }
   }
 
   .main-footer__wrapper {
@@ -44,13 +55,22 @@
   .main-footer__logo-link {
     margin: 0;
     margin-right: 77px;
+    margin-top: -8px;
+  }
+
+  .main-footer__copyright {
+    margin-top: 5px;
   }
 }
 
-@media (min-width: 990px) {
+@media (min-width: 960px) {
   .main-footer {
-    padding-top: 74px;
+    padding-top: 60px;
     padding-bottom: 74px;
+
+    &--form-indent {
+      padding-top: 26px;
+    }
   }
 
   .main-footer__wrapper {

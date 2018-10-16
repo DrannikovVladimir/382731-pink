@@ -220,7 +220,7 @@
 }
 
 .main-form__button {
-  margin-bottom: 22px;
+  margin-bottom: 24px;
 }
 
 .main-form__text-help {
@@ -247,7 +247,7 @@
   }
 
   .main-form__user-date {
-    margin-bottom: 55px;
+    margin-bottom: 58px;
     padding: 0;
     order: 1;
 
@@ -257,7 +257,7 @@
       display: flex;
       align-items: center;
 
-      margin-bottom: 54px;
+      margin-bottom: 53px;
     }
 
     .main-form__item:last-child {
@@ -319,12 +319,12 @@
         content: "";
 
         position: absolute;
-        right: 0;
-        top: 0;
+        right: 2px;
+        top: 2px;
 
         display: block;
-        width: 60px;
-        height: 60px;
+        width: 58px;
+        height: 58px;
 
         background-color: @border-color;
 
@@ -338,8 +338,10 @@
     }
 
     .main-form__input {
-      margin-bottom: 10px;
+      margin-bottom: 11px;
       padding-right: 80px;
+      padding-top: 12px;
+      padding-left: 17px;
     }
 
     .main-form__item-phone::before {
@@ -410,7 +412,7 @@
   }
 }
 
-@media (min-width: 990px) {
+@media (min-width: 960px) {
   .main-form {
     flex-direction: row;
     flex-wrap: wrap;
@@ -430,6 +432,10 @@
     width: 435px;
     margin-right: auto;
     padding-top: 14px;
+
+    .main-form__item {
+      margin-bottom: 55px;
+    }
   }
 
   .main-form__app {
