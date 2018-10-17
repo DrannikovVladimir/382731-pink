@@ -26,15 +26,6 @@
   color: @bg-main-color;
 }
 
-.site-list__link[href]:hover,
-.site-list__link[href]:focus {
-  color: @accent-color;
-}
-
-.site-list__link[href]:active {
-  opacity: 0.3;
-}
-
 @media (min-width: 960px) {
   .site-list {
     flex-direction: row;
@@ -48,6 +39,16 @@
     background-color: transparent;
   }
 
+  .site-list__link[href]:hover,
+  .site-list__link[href]:focus {
+    color: @accent-color;
+  }
+
+  .site-list__link[href]:active {
+    color: @bg-main-color;
+    opacity: 0.3;
+  }
+
   .site-list__item {
     border: none;
     padding-bottom: 10px;
@@ -56,10 +57,5 @@
     &--active {
       border-bottom: 2px solid @bg-main-color;
     }
-  }
-
-  .site-list__link[href]:active {
-    color: @bg-main-color;
-    opacity: 0.3;
   }
 }
