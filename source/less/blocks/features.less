@@ -11,15 +11,20 @@
 }
 
 .features__wrapper {
+  position: relative;
+  overflow: hidden;
+
   margin: 0 auto;
   padding: 0 20px;
   padding-bottom: 279px;
   width: 320px;
+}
 
-  background-image: url("../img/iphone-screen-mobile@1x.png");
-  background-position: center bottom -42px;
-  background-repeat: no-repeat;
-  background-size: auto;
+.features__image {
+  position: absolute;
+  bottom: -50px;
+  left: 50%;
+  transform: translateX(-50%);
 }
 
 .features__slogan {
@@ -88,10 +93,12 @@
     flex-direction: column;
     width: 660px;
     padding-bottom: 0;
+  }
 
-    background-image: url("../img/iphone-screen-3-tablet@1x.png");
-    background-position: left 20px bottom 0;
-    background-repeat: no-repeat;
+  .features__image {
+    position: absolute;
+    bottom: -7px;
+    left: 155px;
   }
 
   .features-inner__wrapper {
@@ -119,20 +126,22 @@
     background-size: auto 745px;
   }
 
-  .features__wrapper {
-    width: 960px;
-
-    background: none;
-    // background-image: url("../img/iphone-screen-1-desktop@1x.png"),
-    //   url("../img/iphone-screen-2-desktop@1x.png"),
-    //   url("../img/iphone-screen-3-desktop@1x.png");
-    // background-position: 14px 255px,
-    //   335px 255px,
-    //   657px 255px;
+  .features-title__wrapper {
+    margin-bottom: 75px;
   }
 
-  .features-title__wrapper {
-    margin-bottom: 433px;
+  .features__wrapper {
+    width: 960px;
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+
+  .features__image {
+    position: static;
+    left: auto;
+    bottom: auto;
+    transform: translateX(0);
+    margin-bottom: 49px;
   }
 
   .features__slogan {
@@ -143,9 +152,9 @@
     justify-content: center;
   }
 
-  // .features-list__wrapper {
-  //   width: 880px;
-  // }
+  .features-list__wrapper {
+    width: 100%;
+  }
 
   .features__list {
     display: flex;
@@ -154,18 +163,23 @@
     text-align: center;
   }
 
-  // .features__item {
-  //   max-width: 240px;
-  // }
-
-  .features__item-title {
-    margin-bottom: 25px;
-
-    .other-text(30px, 30px);
+  .features__item {
+    width: 300px;
   }
 
   .features__item-text {
+    width: 240px;
+    margin: 0 auto;
+
     .other-text(18px, 30px);
+  }
+
+  .features__item-title {
+    width: 230px;
+    margin: 0 auto;
+    margin-bottom: 25px;
+
+    .other-text(30px, 30px);
   }
 
   .features-effect__wrapper {
