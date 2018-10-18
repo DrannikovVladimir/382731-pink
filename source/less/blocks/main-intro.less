@@ -1,20 +1,29 @@
 .main-intro {
-  padding: 100px 0 85px;
+  width: 100%;
+  padding: 28px 0 52px;
 
   color: @bg-main-color;
   text-align: center;
+
+  &--indent {
+    padding-bottom: 82px;
+  }
 }
 
 .main-intro__title {
   margin: 0;
   .text-light();
-  .other-text(24px, 34px);
+  .other-text(24px, 30px);
 }
 
 @media (min-width: 660px) {
   .main-intro {
     padding-top: 69px;
     padding-bottom: 78px;
+
+    &--indent {
+      padding-bottom: 139px;
+    }
 
     &--space-yes {
       display: none;
@@ -29,14 +38,18 @@
 @media (min-width: 960px) {
   .main-intro {
     padding-top: 63px;
-    padding-bottom: 99px;
+    padding-bottom: 101px;
 
     &--br-none {
       display: none;
     }
+
+    &--space-yes {
+      display: inline;
+    }
   }
 
   .main-intro__title {
-    .other-text(50px, 62px);
+    .other-text(50px, 60px);
   }
 }

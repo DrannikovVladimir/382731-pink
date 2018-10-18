@@ -11,11 +11,17 @@
   <header class="page-header">
     <div class="page-header__inner-wrapper">
       <div class="page-header__wrapper">
-        <div class="page-header__wrapper-logo">
-          <a class="page-header__logo-link">
-            <img class="page-header__logo-image" src="http://placehold.it/150x100" width="75" height="22" alt="Логотип">
-          </a>
-          <button class="page-header__toggle" type="button"><span class="visually-hidden">Открыть меню</span></button>
+        <div class="page-header__wrapper-logo-border">
+          <div class="page-header__wrapper-logo">
+            <a class="page-header__logo-link">
+              <picture>
+                <source media="(min-width: 960px)" srcset="img/logo-pink-white-desktop.svg">
+                <source media="(min-width: 660px)" srcset="img/logo-pink-white-tablet.svg">
+                <img class="page-header__logo-image" src="img/logo-pink-white-mobile.svg" alt="Логотип">
+              </picture>
+            </a>
+            <!-- <button class="page-header__toggle" type="button"><span class="visually-hidden">Открыть меню</span></button> -->
+          </div>
         </div>
 
         <nav class="main-nav">
@@ -46,16 +52,19 @@
             <li class="intro__item">
               <a class="intro__link intro__link--apple" href="https://www.apple.com/itunes">
                 <span class="visually-hidden">Apple</span>
+                <img class="social__image" src="img/logo-apple.svg" width="47" height="56" alt="Apple">
               </a>
             </li>
             <li class="intro__item">
               <a class="intro__link intro__link--android" href="https://play.google.com/store">
                 <span class="visually-hidden">Android</span>
+                <img class="social__image" src="img/logo-android.svg" width="43" height="47" alt="Android">
               </a>
             </li>
             <li class="intro__item">
-              <a class="intro__link intro__link--windows" href="https://www.microsoft.com/ru-ru/store/b/home">
+              <a class="intro__link intro__link--microsoft" href="https://www.microsoft.com/ru-ru/store/b/home">
                 <span class="visually-hidden">Windows</span>
+                <img class="social__image" src="img/logo-microsoft.svg" width="44" height="41" alt="Microsoft">
               </a>
             </li>
           </ul>
@@ -66,27 +75,48 @@
   </header>
 
   <main>
-    <h1 class="visually-hidden">Мобильное приложение Пинк</h1>
+    <!-- <h1 class="visually-hidden">Мобильное приложение Пинк</h1> -->
 
     <section class="features">
       <div class="features__wrapper">
         <div class="features-title__wrapper">
           <h2 class="visually-hidden">Характеристики приложения</h2>
-          <p class="features__slogan">Устали от серости мегополиса?</p>
-          <p class="features__slogan">Нам есть что вам предложить!</p>
+          <p class="features__slogan">Устали от серости мегаполиса?</p>
+          <p class="features__slogan">Нам есть, что вам предложить!</p>
         </div>
         <div class="features-inner__wrapper">
           <div class="features-list__wrapper">
             <ul class="features__list">
               <li class="features__item">
+                <div class="features__image">
+                  <picture>
+                    <source media="(min-width: 960px)" srcset="img/iphone-screen-1-desktop@1x.png">
+                    <source media="(min-width: 660px)" srcset="img/iphone-screen-1-tablet@1x.png">
+                    <img class="features__hit-image" src="img/iphone-screen-mobile@1x.png" alt="">
+                  </picture>
+                </div>
                 <h3 class="features__item-title">Поднимает настроение</h3>
                 <p class="features__item-text">Приложение позволит вам победить осеннюю хандру и депрессию буквально в несколько кликов!</p>
               </li>
               <li class="features__item">
+                <div class="features__image">
+                  <picture>
+                    <source media="(min-width: 960px)" srcset="img/iphone-screen-2-desktop@1x.png">
+                    <source media="(min-width: 660px)" srcset="img/iphone-screen-2-tablet@1x.png">
+                    <img class="features__hit-image" src="img/iphone-screen-mobile@1x.png" alt="">
+                  </picture>
+                </div>
                 <h3 class="features__item-title">Меняет мир вокруг</h3>
                 <p class="features__item-text">Сделайте снимок и украсьте его смайликом или текстовой подписью, чтобы усилить эффект</p>
               </li>
               <li class="features__item">
+                <div class="features__image">
+                  <picture>
+                    <source media="(min-width: 960px)" srcset="img/iphone-screen-3-desktop@1x.png">
+                    <source media="(min-width: 660px)" srcset="img/iphone-screen-3-tablet@1x.png">
+                    <img class="features__hit-image" src="img/iphone-screen-mobile@1x.png" alt="">
+                  </picture>
+                </div>
                 <h3 class="features__item-title">Заводит новых друзей</h3>
                 <p class="features__item-text">Ставьте лайки, комментируйте, делитесь фотографиями с друзьями и заводите новых</p>
               </li>
@@ -94,39 +124,43 @@
           </div>
         </div>
       </div>
+    </section>
 
-      <div class="features-effect__wrapper">
-        <div class="features-effect__inner-wrapper">
-          <h3 class="features-effect__title">Эффект на 24 часа!</h3>
-          <p class="features-effect__text">Британские ученые провели исследования и доказали, что положительный эффект от использования приложения длится целые сутки!</p>
-          <a href="" class="features-effect__link">Узнать больше об исследовании</a>
+    <section class="effect effect--mobile-none">
+      <div class="effect__wrapper">
+        <div class="effect__inner-wrapper">
+          <h2 class="effect__title">Эффект <br class="effect__text--br-none">на 24 часа!</h2>
+          <p class="effect__text">Британские ученые провели исследования <br class="effect__text--br-none"> и доказали,<br class="effect__text--br-desktop-yes"> что положительный эффект <br class="effect__text--br-none"> от использования приложения длится <br class="effect__text--br-none"> целые сутки!</p>
+          <a href="" class="effect__link">Узнать больше об исследовании</a>
         </div>
       </div>
     </section>
 
     <section class="feedback">
-      <div class="feedback__wrapper slider">
+      <div class="feedback__wrapper">
         <h2 class="visually-hidden">Отзывы</h2>
-        <div class="feedback__list slider__list">
-          <article class="feedback__item slider__item">
+        <div class="feedback__list">
+          <article class="feedback__item">
             <h3 class="feedback__item-title">Николай Петров</h3>
             <p class="feedback__item-subtitle">25 лет, водитель трамвая</p>
             <p class="feedback__item-text">«Это приложение перевернуло мой мир и позволило по-новому взглянуть на привычные серые вещи! А еще я познакомился со своей будущей женой в комментариях к выложенной фотографии!»</p>
           </article>
-          <article class="feedback__item slider__item">
-            <h3 class="feedback__item-title"></h3>
-            <p class="feedback__item-text"></p>
+          <article class="feedback__item feedback__item--display-none">
+            <h3 class="feedback__item-title">Николай Петров</h3>
+            <p class="feedback__item-subtitle">25 лет, водитель трамвая</p>
+            <p class="feedback__item-text">«Это приложение перевернуло мой мир и позволило по-новому взглянуть на привычные серые вещи! А еще я познакомился со своей будущей женой в комментариях к выложенной фотографии!»</p>
           </article>
-          <article class="feedback__item slider__item">
-            <h3 class="feedback__item-title"></h3>
-            <p class="feedback__item-text"></p>
+          <article class="feedback__item feedback__item--display-none">
+            <h3 class="feedback__item-title">Николай Петров</h3>
+            <p class="feedback__item-subtitle">25 лет, водитель трамвая</p>
+            <p class="feedback__item-text">«Это приложение перевернуло мой мир и позволило по-новому взглянуть на привычные серые вещи! А еще я познакомился со своей будущей женой в комментариях к выложенной фотографии!»</p>
           </article>
         </div>
       </div>
-      <div class="feedback__toggles slider__toggles">
-        <button class="slider__toggle">1</button>
-        <button class="slider__toggle">2</button>
-        <button class="slider__toggle">3</button>
+      <div class="feedback__toggles">
+        <button class="feedback__toggles-item feedback__toggles-item--active"><span class="visually-hidden">Слайд 1</span></button>
+        <button class="feedback__toggles-item"><span class="visually-hidden">Слайд 2</span></button>
+        <button class="feedback__toggles-item"><span class="visually-hidden">Слайд 3</span></button>
       </div>
     </section>
 
@@ -135,7 +169,7 @@
         <h2 class="visually-hidden">Тарифы</h2>
         <table class="rates__list">
           <tr class="rates__header">
-            <th class="rates__item-title">
+            <th class="rates__item-title rates__item--mobile-none">
             </th>
             <th class="rates__item-title">
               <span class="rates__title-name">База</span><br>
@@ -151,19 +185,19 @@
             </th>
           </tr>
           <tr class="rates__row">
-            <td class="rates__item rates__item--current">Розовый фильтр</td>
+            <td class="rates__item rates__item--mobile-none rates__item--current">Розовый фильтр</td>
             <td class="rates__item rates__item-filter rates__item--yes" filter="Розовый фильтр"></td>
             <td class="rates__item rates__item-filter rates__item--yes" filter="Розовый фильтр"></td>
             <td class="rates__item rates__item-filter rates__item--yes" filter="Розовый фильтр"></td>
           </tr>
           <tr class="rates__row">
-            <td class="rates__item">Смайлики</td>
+            <td class="rates__item rates__item--mobile-none">Смайлики</td>
             <td class="rates__item rates__item-smile rates__item--no" smile="Смайлики"></td>
             <td class="rates__item rates__item-smile rates__item--yes" smile="Смайлики"></td>
             <td class="rates__item rates__item-smile rates__item--yes" smile="Смайлики"></td>
           </tr>
           <tr class="rates__row">
-            <td class="rates__item">Комментарии</td>
+            <td class="rates__item rates__item--mobile-none">Комментарии</td>
             <td class="rates__item rates__item-comment rates__item--no" comment="Комментарии"></td>
             <td class="rates__item rates__item-comment rates__item--no" comment="Комментарии"></td>
             <td class="rates__item rates__item-comment rates__item--yes" comment="Комментарии"></td>
@@ -171,10 +205,10 @@
         </table>
       </div>
 
-      <div class="rates__toggles slider__toggles">
-        <button class="slider__toggle">1</button>
-        <button class="slider__toggle">2</button>
-        <button class="slider__toggle">3</button>
+      <div class="rates__toggles">
+        <button class="rates__toggles-item"><span class="visually-hidden">Слайд 1</span></button>
+        <button class="rates__toggles-item rates__toggles-item--active"><span class="visually-hidden">Слайд 2</span></button>
+        <button class="rates__toggles-item"><span class="visually-hidden">Слайд 3</span></button>
       </div>
     </section>
 
@@ -184,7 +218,7 @@
         <div class="contacts__wrapper-inner">
           <div class="contacts__wrapper-box">
             <p class="contacts__subtitle">Звоните:</p>
-            <a class="contacts__text" href="tel:+78125556666">Тел.: +7 (812) 555-66-66</a>
+            <a class="contacts__text" href="tel:+78125556666">+7 (812) 555-66-66</a>
           </div>
           <div class="contacts__wrapper-box">
             <p class="contacts__subtitle">Пишите:</p>
@@ -192,13 +226,20 @@
           </div>
           <div class="contacts__wrapper-box">
             <p class="contacts__subtitle">Приезжайте в гости:</p>
-            <p class="contacts__text">ул. Большая<br>Конюшенная, 19/8</p>
+            <p class="contacts__text">ул. Большая <br>Конюшенная, 19/8</p>
           </div>
         </div>
       </div>
+    </section>
 
-      <div class="contacts__map">
-        <img src="http://placehold.it/150x100" alt="Карта">
+    <section class="map">
+      <iframe class="map__iframe" src="https://yandex.kz/map-widget/v1/-/CBB8BEx68B"></iframe>
+      <div class="map__wrapper">
+        <picture>
+          <source media="(min-width: 960px)" srcset="img/bg-map-desktop@1x.jpg">
+          <source media="(min-width: 660px)" srcset="img/bg-map-tablet@1x.jpg">
+          <img class="map__image" src="img/bg-map-mobile@1x.png" alt="ул. Большая Конюшенная, 19/8">
+        </picture>
       </div>
     </section>
   </main>
@@ -206,10 +247,13 @@
   <footer class="main-footer footer-index">
     <div class="main-footer__wrapper">
       <a class="main-footer__logo-link footer-logo" href="index.html">
-        <img class="footer-logo__image" src="http://placehold.it/150x100" width="147" height="40" alt="Логотип">
+        <picture>
+          <source media="(min-width: 960px)" srcset="img/logo-pink-blue-desktop.svg">
+          <img class="footer-logo__image"  src="img/logo-pink-blue-mobile.svg" alt="Логотип">
+        </picture>
       </a>
 
-      <ul class="social-list social">
+      <ul class="main-footer__social social">
         <li class="social__item">
           <a class="social__link social__link--twitter" href="https://twitter.com">
             <span class="visually-hidden">Твиттер</span>
@@ -230,6 +274,7 @@
       <div class="main-footer__copyright copyright">
         <p class="copyright__text">Разработано</p>
         <a class="copyright__link" href="https://htmlacademy.ru/intensive/adaptive">
+          <img class="copyright__image" src="img/logo-htmlacademy.svg" width="27" height="34" alt="HTMLacademy">
           <span class="visually-hidden">HTML Academy</span>
         </a>
       </div>

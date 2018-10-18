@@ -1,9 +1,13 @@
 .feedback {
-  padding: 50px 0 130px;
+  padding: 40px 0 132px;
 
   text-align: center;
 
-  background-image: linear-gradient(@bg-extra-color 100%, @bg-extra-color 65px, @bg-main-color 65px, @bg-main-color 0);
+  background-color: @bg-extra-color;
+  background-image: url("../img/bg-triangle-white.svg");
+  background-repeat: no-repeat;
+  background-position: center top;
+  background-size: auto 730px;
 }
 
 .feedback__wrapper {
@@ -14,7 +18,7 @@
 
 .feedback__item-title {
   margin: 0;
-  margin-bottom: 25px;
+  margin-bottom: 14px;
   .other-text();
   .text-bold();
 }
@@ -30,7 +34,57 @@
   .main-text(14px, 30px);
 }
 
+.feedback__toggles {
+  display: flex;
+  width: 62px;
+  height: 12px;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0 auto;
+}
+
+.feedback__toggles-item {
+  position: relative;
+
+  display: block;
+  width: 12px;
+  height: 12px;
+
+  border: none;
+  background-color: transparent;
+
+  &::before {
+    content: "";
+
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    display: block;
+    width: 12px;
+    height: 12px;
+
+    background-color: @basic-color;
+    border: 3px solid @bg-extra-color;
+    border-radius: 6px;
+
+    opacity: 0.3;
+  }
+
+  &--active::before {
+    background-color: @bg-main-color;
+    border-color: @basic-color;
+    opacity: 1;
+  }
+}
+
 @media (min-width: 660px) {
+  .feedback {
+    padding-bottom: 90px;
+
+    background-size: auto 638px;
+  }
+
   .feedback__wrapper {
     width: 660px;
   }
@@ -43,11 +97,13 @@
   .feedback__item-subtitle {
     display: block;
     margin: 0;
+    margin-bottom: 36px;
+
     order: 3;
   }
 
   .feedback__item-title {
-    margin-bottom: 10px;
+    margin-bottom: 4px;
 
     order: 2;
     .other-text(20px, 30px);
@@ -59,16 +115,82 @@
 }
 
 @media (min-width: 960px) {
+  .feedback {
+    position: relative;
+    padding-top: 115px;
+
+    background-size: auto 910px;
+
+    &::before {
+      content: "";
+
+      position: relative;
+      top: -45px;
+      left: 50%;
+      transform: translateX(-50%);
+
+      display: block;
+      width: 79px;
+      height: 69px;
+
+      background-image: url("../img/icon-quotes.svg");
+      background-repeat: no-repeat;
+      background-position: center top;
+      background-size: 79px 63px;
+    }
+  }
+
   .feedback__wrapper {
+    position: relative;
     width: 960px;
+  }
+
+  .feedback__item-title {
+    .other-text(24px, 30px);
   }
 
   .feedback__item-text {
     width: 690px;
-    margin: 0 auto 35px;
+    margin: 0 auto 36px;
+
+    &::after,
+    &::before {
+      content: "";
+
+      position: absolute;
+      top: 29px;
+
+      display: block;
+      width: 22px;
+      height: 41px;
+
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: 22px 41px;
+    }
+
+    &::before {
+      left: 10px;
+
+      background-image: url("../img/icon-review-arrow-left.svg");
+    }
+
+    &::after {
+      right: 10px;
+
+      background-image: url("../img/icon-review-arrow-right.svg");
+    }
+  }
+
+  .feedback__item-subtitle {
+    .other-text();
   }
 
   .feedback__toggles {
     display: none;
   }
+}
+
+.feedback__item--display-none {
+  display: none;
 }
