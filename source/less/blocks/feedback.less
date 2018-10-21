@@ -137,6 +137,8 @@
       background-repeat: no-repeat;
       background-position: center top;
       background-size: 79px 63px;
+
+      opacity: 0.1;
     }
   }
 
@@ -167,6 +169,9 @@
       background-repeat: no-repeat;
       background-position: center;
       background-size: 22px 41px;
+      opacity: 0.3;
+
+      cursor: pointer;
     }
 
     &::before {
@@ -179,6 +184,16 @@
       right: 10px;
 
       background-image: url("../img/icon-review-arrow-right.svg");
+    }
+
+    &:hover::after,
+    &:hover::before {
+      opacity: 1;
+    }
+
+    &:active::after,
+    &:active::before {
+      opacity: 0.1;
     }
   }
 
