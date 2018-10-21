@@ -26,13 +26,16 @@
   padding: 0 20px;
 }
 
-.page-header__logo-link:hover,
-.page-header__logo-link:focus {
-  color: @accent-color;
+.page-header__logo-icon {
+  width: 75px;
+  height: 22px;
+
+  fill: @bg-main-color;
 }
 
-.page-header__logo-link:active {
-  opacity: 0.3;
+.page-header__logo-tablet,
+.page-header__logo-desktop {
+  display: none;
 }
 
 .page-header__wrapper-logo-border {
@@ -75,8 +78,30 @@
     min-height: 110px;
   }
 
-  .page-header__logo-link {
-    margin-top: -6px;
+  .page-header__logo-icon {
+    width: 147px;
+    height: 40px;
+  }
+
+  .page-header__logo-tablet {
+    display: inline-block;
+  }
+
+  .page-header__logo-mobile {
+    display: none;
+  }
+
+  .page-header__logo-link:hover .page-header__logo-icon {
+    @media (max-width: 959px) {
+      fill: @accent-color;
+    }
+  }
+
+  .page-header__logo-link:active .page-header__logo-icon {
+    @media (max-width: 959px) {
+      opacity: 0.3;
+      fill: @bg-main-color;
+    }
   }
 }
 
@@ -118,6 +143,14 @@
     padding: 0;
 
     border-bottom: none;
+  }
+
+  .page-header__logo-desktop {
+    display: inline-block;
+  }
+
+  .page-header__logo-tablet {
+    display: none;
   }
 
   .page-header__toggle {
