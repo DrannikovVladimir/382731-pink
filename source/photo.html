@@ -6,6 +6,11 @@
   <meta name="format-detection" content="telephone=no">
   <link rel="stylesheet" href="css/style.css">
   <title>Фотографии пользователей</title>
+  <script>
+    // Picture element HTML5 shiv
+    document.createElement( "picture" );
+  </script>
+  <script src="js/picturefill.min.js" async></script>
 </head>
 <body>
   <div style="display: none">
@@ -112,18 +117,15 @@
   <header class="page-header">
     <div class="page-header__inner-wrapper">
       <div class="page-header__wrapper">
-        <div class="page-header__wrapper-logo">
-          <a class="page-header__logo-link" href="index.html">
-            <svg class="page-header__logo-icon" width="147" height="40">
-              <use xlink:href="#header-icon"></use>
-            </svg>
-            <!-- <picture>
-              <source media="(min-width: 960px)" srcset="img/logo-pink-white-desktop.svg">
-              <source media="(min-width: 660px)" srcset="img/logo-pink-white-tablet.svg">
-              <img class="page-header__logo-image" src="img/logo-pink-white-mobile.svg" alt="Логотип">
-            </picture> -->
-          </a>
-          <!-- <button class="page-header__toggle" type="button"><span class="visually-hidden">Открыть меню</span></button> -->
+        <div class="page-header__wrapper-logo-border">
+          <div class="page-header__wrapper-logo">
+            <a class="page-header__logo-link">
+              <svg class="page-header__logo-icon" width="147" height="40">
+                <use xlink:href="#header-icon"></use>
+              </svg>
+            </a>
+            <!-- <button class="page-header__toggle" type="button"><span class="visually-hidden">Открыть меню</span></button> -->
+          </div>
         </div>
 
         <nav class="main-nav">
@@ -193,7 +195,9 @@
             </a>
             <div class="gallery__text">
               <p class="gallery__user-name">Левон<span class="gallery__user-time"> (5 часов назад)</span></p>
-              <p class="gallery__user-photo-description">Вчера он на луну летал, сегодня в руки к нам попал.</p>
+              <div class="gallery__text-wrapper">
+                <p class="gallery__user-text">Вчера он на луну летал, сегодня в руки к нам попал.</p>
+              </div>
               <p class="gallery__user-photo-like">Нравится: 336</p>
             </div>
           </li>
@@ -210,7 +214,9 @@
             </a>
             <div class="gallery__text">
               <p class="gallery__user-name">Антон<span class="gallery__user-time"> (12 часов назад)</span></p>
-              <p class="gallery__user-photo-description">Соседи будут рады!</p>
+              <div class="gallery__text-wrapper">
+                <p class="gallery__user-text">Соседи будут рады!</p>
+              </div>
               <p class="gallery__user-photo-like">Нравится: 666</p>
             </div>
           </li>
@@ -227,7 +233,9 @@
             </a>
             <div class="gallery__text">
               <p class="gallery__user-name">Борис<span class="gallery__user-time"> (20 часов назад)</span></p>
-              <p class="gallery__user-photo-description">Здесь могла быть ваша цитата о высоком и вечном.</p>
+              <div class="gallery__text-wrapper">
+                <p class="gallery__user-text">Здесь могла быть ваша цитата о высоком и вечном.</p>
+              </div>
               <p class="gallery__user-photo-like">Нравится: 215</p>
             </div>
           </li>
@@ -244,7 +252,9 @@
             </a>
             <div class="gallery__text">
               <p class="gallery__user-name">Сергей<span class="gallery__user-time"> (25 часов назад)</span></p>
-              <p class="gallery__user-photo-description">Самая кубанская в мире!</p>
+              <div class="gallery__text-wrapper">
+                <p class="gallery__user-text">Самая кубанская в мире!</p>
+              </div>
               <p class="gallery__user-photo-like">Нравится: 4</p>
             </div>
           </li>
@@ -261,7 +271,9 @@
             </a>
             <div class="gallery__text">
               <p class="gallery__user-name">Максим<span class="gallery__user-time"> (40 часов назад)</span></p>
-              <p class="gallery__user-photo-description">Где снег-то?</p>
+              <div class="gallery__text-wrapper">
+                <p class="gallery__user-text">Где снег-то?</p>
+              </div>
               <p class="gallery__user-photo-like">Нравится: 150</p>
             </div>
           </li>
@@ -278,7 +290,9 @@
             </a>
             <div class="gallery__text">
               <p class="gallery__user-name">Надежда<span class="gallery__user-time"> (45 часов назад)</span></p>
-              <p class="gallery__user-photo-description">Всем GM и взаимные лайки!</p>
+              <div class="gallery__text-wrapper">
+                <p class="gallery__user-text">Всем GM и взаимные лайки!</p>
+              </div>
               <p class="gallery__user-photo-like">Нравится: 2560</p>
             </div>
           </li>
