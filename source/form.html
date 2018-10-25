@@ -112,18 +112,15 @@
   <header class="page-header">
     <div class="page-header__inner-wrapper">
       <div class="page-header__wrapper">
-        <div class="page-header__wrapper-logo">
-          <a class="page-header__logo-link" href="index.html">
-            <svg class="page-header__logo-icon" width="147" height="40">
-              <use xlink:href="#header-icon"></use>
-            </svg>
-            <!-- <picture>
-              <source media="(min-width: 960px)" srcset="img/logo-pink-white-desktop.svg">
-              <source media="(min-width: 660px)" srcset="img/logo-pink-white-tablet.svg">
-              <img class="page-header__logo-image" src="img/logo-pink-white-mobile.svg" alt="Логотип">
-            </picture> -->
-          </a>
-          <!-- <button class="page-header__toggle" type="button"><span class="visually-hidden">Открыть меню</span></button> -->
+        <div class="page-header__wrapper-logo-border">
+          <div class="page-header__wrapper-logo">
+            <a class="page-header__logo-link">
+              <svg class="page-header__logo-icon" width="147" height="40">
+                <use xlink:href="#header-icon"></use>
+              </svg>
+            </a>
+            <!-- <button class="page-header__toggle" type="button"><span class="visually-hidden">Открыть меню</span></button> -->
+          </div>
         </div>
 
         <nav class="main-nav">
@@ -161,16 +158,16 @@
             <h3 class="visually-hidden">ФИО пользователя</h3>
             <ul class="main-form__list">
               <li class="main-form__item">
-                <label class="main-form__label" for="userSurname">Фамилия:</label>
-                <input class="main-form__input" id="userSurname" type="text" name="user-surname" placeholder="Укажите фамилию *">
+                <label class="main-form__label">Фамилия:</label>
+                <input class="main-form__input" type="text" name="user-surname" placeholder="Укажите фамилию *">
               </li>
               <li class="main-form__item">
-                <label class="main-form__label" for="userName">Имя:</label>
-                <input class="main-form__input" id="userName" type="text" name="user-name" placeholder="Введите ваше имя *">
+                <label class="main-form__label">Имя:</label>
+                <input class="main-form__input" type="text" name="user-name" placeholder="Введите ваше имя *">
               </li>
               <li class="main-form__item">
-                <label class="main-form__label" for="userPatronymic">Отчество:</label>
-                <input class="main-form__input" id="userPatronymic" type="text" name="user-patronymic" placeholder="Ну и отчество тоже">
+                <label class="main-form__label">Отчество:</label>
+                <input class="main-form__input" type="text" name="user-patronymic" placeholder="Ну и отчество тоже">
               </li>
             </ul>
           </div>
@@ -209,18 +206,18 @@
             <legend class="main-form__subtitle">Контактная информация</legend>
             <ul class="main-form__list">
               <li class="main-form__item main-form__item-phone">
-                <label class="main-form__label" for="userPhone">Номер телефона</label>
-                <input class="main-form__input" id="userPhone" type="text" placeholder="Номер, пожалуйста">
+                <label class="main-form__label">Номер телефона</label>
+                <input class="main-form__input main-form__input--phone" type="text" placeholder="Номер, пожалуйста">
               </li>
               <li class="main-form__item main-form__item-email">
-                <label class="main-form__label" for="userEmail">Адрес почты</label>
-                <input class="main-form__input" id="userEmail" type="text" placeholder="Введите почту *">
+                <label class="main-form__label">Адрес почты</label>
+                <input class="main-form__input main-form__input--email" type="text" placeholder="Введите почту *">
               </li>
             </ul>
           </fieldset>
 
           <fieldset class="main-form__list-wrapper main-form__app">
-            <legend class="main-form__subtitle">С каким приложением путешествовали?</legend>
+            <legend class="main-form__subtitle">С каким приложением <br class="main-form__subtitle--tablet-none">путешествовали?</legend>
             <ul class="main-form__list">
               <li class="main-form__item">
                 <input class="visually-hidden main-form__radio-input" id="radioIos" type="radio" name="value-os" value="ios" checked="">
@@ -257,10 +254,6 @@
         <svg class="main-footer__logo-icon" width="147" height="40">
           <use xlink:href="#footer-logo"></use>
         </svg>
-        <!-- <picture>
-          <source media="(min-width: 960px)" srcset="img/logo-pink-blue-desktop.svg">
-          <img class="footer-logo__image"  src="img/logo-pink-blue-mobile.svg" alt="Логотип">
-        </picture> -->
       </a>
 
       <ul class="main-footer__social social">

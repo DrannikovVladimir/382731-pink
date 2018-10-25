@@ -13,7 +13,7 @@
 .gallery__description {
   width: 250px;
   margin: 0 auto;
-  margin-bottom: 29px;
+  margin-bottom: 31px;
 
   text-align: center;
   .main-text(14px, 30px);
@@ -28,7 +28,7 @@
 }
 
 .gallery__item {
-  margin-bottom: 20px;
+  margin-bottom: 21px;
 
   background-color: @bg-extra-color;
 }
@@ -112,7 +112,7 @@
   text-transform: uppercase;
 }
 
-.gallery__user-photo-description,
+.gallery__user-text,
 .gallery__hit-photo-description {
   margin: 0;
   margin-bottom: 10px;
@@ -130,6 +130,7 @@
   background-image: url("../img/icon-heart.svg");
   background-repeat: no-repeat;
   background-position: left center;
+  background-size: 14px 12px;
 }
 
 .gallery__slogan {
@@ -203,6 +204,10 @@
     height: 300px;
   }
 
+  .gallery__text-wrapper {
+    min-height: 60px;
+  }
+
   .gallery__text {
     display: flex;
     flex-direction: column;
@@ -221,6 +226,7 @@
     background-image: url("../img/icon-heart.svg");
     background-repeat: no-repeat;
     background-position: right 12px center;
+    background-size: 14px 12px;
   }
 
   .gallery__slogan {
@@ -280,7 +286,7 @@
   .gallery__text {
     display: flex;
     flex-direction: column;
-    min-height: 147px;
+    // min-height: 147px;
     padding-top: 17px;
     padding-left: 28px;
     padding-bottom: 21px;
