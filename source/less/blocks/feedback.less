@@ -1,13 +1,7 @@
 .feedback {
-  padding: 45px 0 132px;
+  padding: 42px 0 8px;
 
   text-align: center;
-
-  background-color: @bg-extra-color;
-  background-image: url("../img/bg-triangle-white.svg");
-  background-repeat: no-repeat;
-  background-position: center top;
-  background-size: auto 730px;
 }
 
 .feedback__wrapper {
@@ -81,9 +75,7 @@
 @media (min-width: 660px) {
   .feedback {
     padding-top: 40px;
-    padding-bottom: 90px;
-
-    background-size: auto 638px;
+    padding-bottom: 0;
   }
 
   .feedback__wrapper {
@@ -119,8 +111,7 @@
   .feedback {
     position: relative;
     padding-top: 117px;
-
-    background-size: auto 910px;
+    padding-bottom: 30px;
 
     &::before {
       content: "";
@@ -201,6 +192,7 @@
   }
 
   .feedback__item-subtitle {
+    margin-bottom: 0;
     .other-text();
   }
 

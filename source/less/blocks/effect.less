@@ -1,10 +1,12 @@
-@media (max-width: 660px) {
-  .effect--mobile-none {
-    display: none;
-  }
+.effect--mobile-none {
+  display: none;
 }
 
 @media (min-width: 660px) {
+  .effect--mobile-none {
+    display: block;
+  }
+
   .effect__wrapper {
     position: relative;
 
@@ -55,12 +57,14 @@
   }
 
   .effect__title {
+    width: 200px;
     margin: 0;
     margin-bottom: 10px;
     .other-text(30px, 36px);
   }
 
   .effect__text {
+    width: 298px;
     margin: 0;
     margin-bottom: 11px;
   }
@@ -110,6 +114,10 @@
       border: 17px solid @accent-color;
       border-radius: 150px;
     }
+
+    br {
+      display: none;
+    }
   }
 
 
@@ -118,25 +126,21 @@
   }
 
   .effect__title {
+    width: auto;
     margin-bottom: 25px;
   }
 
   .effect__text {
+    width: 525px;
     margin-bottom: 31px;
     .other-text();
 
-    &--br-none {
-      display: none;
+    span {
+      display: inline;
     }
   }
 
   .effect__link {
     .other-text();
-  }
-}
-
-@media (max-width: 959px) {
-  .effect__text--br-desktop-yes {
-    display: none;
   }
 }

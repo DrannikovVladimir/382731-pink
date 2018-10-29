@@ -40,28 +40,7 @@
 
 .page-header__wrapper-logo-border {
   display: flex;
-  // align-items: center;
   border-bottom: 1px solid black;
-}
-
-.page-header__toggle {
-  display: block;
-  width: 24px;
-  height: 23px;
-
-  background-color: @basic-color;
-  background-image: url("../img/icon-menu-cross.svg");
-  background-size: cover;
-  border: none;
-}
-
-.page-header__toggle:hover,
-.page-header__toggle:focus {
-  background-image: url("../img/icon-menu-cross-hover.svg");
-}
-
-.page-header__toggle:active {
-  opacity: 0.3;
 }
 
 @media (min-width: 660px) {
@@ -99,16 +78,12 @@
   }
 
   .page-header__logo-link:hover .page-header__logo-icon {
-    @media (max-width: 959px) {
-      fill: @accent-color;
-    }
+    fill: @accent-color;
   }
 
   .page-header__logo-link:active .page-header__logo-icon {
-    @media (max-width: 959px) {
-      opacity: 0.3;
-      fill: @bg-main-color;
-    }
+    opacity: 0.3;
+    fill: @bg-main-color;
   }
 }
 
@@ -162,10 +137,6 @@
   }
 
   .page-header__logo-tablet {
-    display: none;
-  }
-
-  .page-header__toggle {
     display: none;
   }
 }

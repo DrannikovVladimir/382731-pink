@@ -178,7 +178,8 @@
 }
 
 
-.main-form__checkbox-input:hover + label::before {
+.main-form__checkbox-input:hover + label::before,
+.main-form__checkbox-input:focus + label::before {
   border-color: black;
 }
 
@@ -218,7 +219,8 @@
   background-color: @accent-color;
 }
 
-.main-form__radio-input:hover + label::before {
+.main-form__radio-input:hover + label::before,
+.main-form__radio-input:focus + label::before {
   border-color: black;
 }
 
@@ -502,7 +504,7 @@
     margin: 0;
     padding-top: 34px;
     padding-bottom: 36px;
-    margin-bottom: 65px;
+    margin-bottom: 66px;
 
     .main-form__textarea {
       width: 100%;
@@ -513,9 +515,9 @@
   .main-form__success {
     flex-basis: 100%;
     padding-top: 49px;
-    padding-right: 33px;
+    padding-right: 60px;
     padding-bottom: 42px;
-    padding-left: 29px;
+    padding-left: 57px;
 
     .main-form__checkbox-label {
       padding-left: 60px;
@@ -525,16 +527,15 @@
       display: flex;
       flex-direction: column;
       flex-wrap: wrap;
-      align-content: space-around;
-      justify-content: space-between;
+      align-content: space-between;
       height: 130px;
     }
 
     .main-form__item {
-      margin-bottom: 17px;
+      margin-bottom: 54px;
 
-      &:last-child {
-        margin-bottom: 17px;
+      &:nth-child(2n) {
+        margin-bottom: 0;
       }
     }
   }
