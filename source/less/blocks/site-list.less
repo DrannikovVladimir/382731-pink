@@ -23,6 +23,7 @@
 }
 
 .site-list__link {
+  display: block;
   color: @bg-main-color;
 }
 
@@ -30,7 +31,8 @@
   .site-list {
     flex-direction: row;
     width: 622px;
-    justify-content: space-between;
+    // justify-content: space-between;
+    flex-wrap: wrap;
 
     .other-text(18px, 18px);
     .text-normal();
@@ -52,12 +54,31 @@
   }
 
   .site-list__item {
-    border: none;
+    margin-right: 80px;
     padding-bottom: 10px;
     padding-top: 10px;
 
+    border: none;
+
+    &:last-of-type {
+      margin-right: 0;
+    }
+
     &--active {
-      border-bottom: 2px solid @bg-main-color;
+      position: relative;
+
+      &::after {
+        content: "";
+
+        position: absolute;
+        right: 0;
+        left: 0;
+        bottom: 0;
+
+        height: 2px;
+
+        background-color: @bg-main-color;
+      }
     }
   }
 }

@@ -124,11 +124,19 @@
                 <use xlink:href="#header-icon"></use>
               </svg>
             </a>
-            <!-- <button class="page-header__toggle" type="button"><span class="visually-hidden">Открыть меню</span></button> -->
           </div>
         </div>
 
-        <nav class="main-nav">
+        <!-- Реализация меню без JS -->
+        <!-- main-nav--opened - показывает меню -->
+        <!-- main-nav--closed - скрывает меню -->
+        <nav class="main-nav main-nav--nojs">
+          <div class="main-nav__toggle-wrapper">
+            <!-- Кнопка для переключениф меню -->
+            <button class="main-nav__toggle" type="button">
+              <span class="visually-hidden">Открыть меню</span>
+            </button>
+          </div>
           <ul class="main-nav__list site-list">
             <li class="site-list__item site-list__item--active">
               <a class="site-list__link">Главная</a>
@@ -149,26 +157,26 @@
 
     <section class="intro">
       <div class="intro__wrapper">
-        <div class="intro-inner__wrapper">
-          <h2 class="intro__title">Взгляните<br>на жизнь<br>иначе!</h2>
+        <div class="intro__inner-wrapper">
+          <h2 class="intro__title">Взгляните на жизнь иначе!</h2>
           <a class="intro__button button" href="https://www.apple.com/itunes">Скачать приложение</a>
           <ul class="intro__list">
             <li class="intro__item">
-              <a class="intro__link intro__link--apple" href="https://www.apple.com/itunes">
+              <a class="intro__link" href="https://www.apple.com/itunes">
                 <span class="visually-hidden">Apple</span>
-                <img class="social__image" src="img/logo-apple.svg" width="47" height="56" alt="Apple">
+                <img class="intro__image intro__image--apple" src="img/logo-apple.svg" width="47" height="56" alt="Apple">
               </a>
             </li>
             <li class="intro__item">
-              <a class="intro__link intro__link--android" href="https://play.google.com/store">
+              <a class="intro__link" href="https://play.google.com/store">
                 <span class="visually-hidden">Android</span>
-                <img class="social__image" src="img/logo-android.svg" width="43" height="47" alt="Android">
+                <img class="intro__image intro__image--android" src="img/logo-android.svg" width="43" height="47" alt="Android">
               </a>
             </li>
             <li class="intro__item">
-              <a class="intro__link intro__link--microsoft" href="https://www.microsoft.com/ru-ru/store/b/home">
+              <a class="intro__link" href="https://www.microsoft.com/ru-ru/store/b/home">
                 <span class="visually-hidden">Windows</span>
-                <img class="social__image" src="img/logo-microsoft.svg" width="44" height="41" alt="Microsoft">
+                <img class="intro__image intro__image--microsoft" src="img/logo-microsoft.svg" width="44" height="41" alt="Microsoft">
               </a>
             </li>
           </ul>
@@ -179,17 +187,17 @@
   </header>
 
   <main>
-    <!-- <h1 class="visually-hidden">Мобильное приложение Пинк</h1> -->
+    <h1 class="visually-hidden">Мобильное приложение Пинк</h1>
 
     <section class="features">
+      <div class="features__slogan-wrapper">
+        <h2 class="visually-hidden">Характеристики приложения</h2>
+        <p class="features__slogan">Устали от серости мегаполиса?</p>
+        <p class="features__slogan">Нам есть, что вам предложить!</p>
+      </div>
       <div class="features__wrapper">
-        <div class="features-title__wrapper">
-          <h2 class="visually-hidden">Характеристики приложения</h2>
-          <p class="features__slogan">Устали от серости мегаполиса?</p>
-          <p class="features__slogan">Нам есть, что вам предложить!</p>
-        </div>
-        <div class="features-inner__wrapper">
-          <div class="features-list__wrapper">
+        <div class="features__inner-wrapper">
+          <div class="features__list-wrapper">
             <ul class="features__list">
               <li class="features__item">
                 <div class="features__image">
@@ -217,7 +225,7 @@
                   </picture>
                 </div>
                 <h3 class="features__item-title">Меняет мир вокруг</h3>
-                <p class="features__item-text">Сделайте снимок и украсьте его смайликом или текстовой подписью, чтобы усилить эффект</p>
+                <p class="features__item-text">Сделайте снимок и украсьте его смайликом или текстовой подписью, чтобы усилить&nbsp;эффект</p>
               </li>
               <li class="features__item">
                 <div class="features__image">
@@ -242,8 +250,8 @@
     <section class="effect effect--mobile-none">
       <div class="effect__wrapper">
         <div class="effect__inner-wrapper">
-          <h2 class="effect__title">Эффект <br class="effect__text--br-none">на 24 часа!</h2>
-          <p class="effect__text">Британские ученые провели исследования <br class="effect__text--br-none"> и доказали,<br class="effect__text--br-desktop-yes"> что положительный эффект <br class="effect__text--br-none"> от использования приложения длится <br class="effect__text--br-none"> целые сутки!</p>
+          <h2 class="effect__title">Эффект на&nbsp;24&nbsp;часа!</h2>
+          <p class="effect__text">Британские ученые провели исследования и доказали, что положительный эффект от&nbsp;использования приложения длится целые сутки!</p>
           <a href="" class="effect__link">Узнать больше об исследовании</a>
         </div>
       </div>
@@ -282,13 +290,13 @@
         <h2 class="visually-hidden">Тарифы</h2>
         <table class="rates__list">
           <tr class="rates__header">
-            <th class="rates__item-title rates__item--mobile-none">
+            <th class="rates__item-title rates__item-title--mobile-none">
             </th>
             <th class="rates__item-title">
               <span class="rates__title-name">База</span><br>
               <span class="rates__title-price">1,99 usd</span>
             </th>
-            <th class="rates__item-title rates__item--hit">
+            <th class="rates__item-title rates__item-title--hit">
               <span class="rates__title-name">Стандарт</span><br>
               <span class="rates__title-price">3,99 usd</span>
             </th>
@@ -335,11 +343,11 @@
           </div>
           <div class="contacts__wrapper-box">
             <p class="contacts__subtitle"> Пишите:</p>
-            <a class="contacts__text contacts__text--email" href="mailto:mail@htmlacademy.ru"> mail@htmlacademy.ru</a>
+            <a class="contacts__text contacts__text--email" href="mailto:mail@htmlacademy.ru">mail@htmlacademy.ru</a>
           </div>
           <div class="contacts__wrapper-box">
             <p class="contacts__subtitle">Приезжайте в гости:</p>
-            <p class="contacts__text">ул. Большая<span class="contacts__text--add-space"> </span><br>Конюшенная, 19/8</p>
+            <p class="contacts__text">ул. Большая Конюшенная, 19/8</p>
           </div>
         </div>
       </div>
@@ -361,7 +369,7 @@
     </section>
   </main>
 
-  <footer class="main-footer footer-index">
+  <footer class="main-footer main-footer--mobile-none">
     <div class="main-footer__wrapper">
       <a class="main-footer__logo-link footer-logo">
         <svg class="main-footer__logo-icon" width="147" height="40">
