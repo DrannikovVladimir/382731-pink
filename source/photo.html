@@ -330,6 +330,7 @@
 
           <div class="photo-post__control">
             <div class="photo-post__control-wrapper">
+
               <div class="photo-post__crop-wrapper">
                 <div class="photo-post__crop">
                   <button class="photo-post__button photo-post__button--crop photo-post__button--active" type="submit">
@@ -396,10 +397,6 @@
         <svg class="main-footer__logo-icon" width="147" height="40">
           <use xlink:href="#footer-logo"></use>
         </svg>
-        <!-- <picture>
-          <source media="(min-width: 960px)" srcset="img/logo-pink-blue-desktop.svg">
-          <img class="footer-logo__image"  src="img/logo-pink-blue-mobile.svg" alt="Логотип">
-        </picture> -->
       </a>
 
       <ul class="main-footer__social social">
@@ -431,5 +428,64 @@
       </div>
     </div>
   </footer>
+
+  <script type="text/javascript">
+    var photoControl = document.querySelector('.photo-post__contrast-scale');
+    var photoToggle = document.querySelector('.photo-post__contrast-toggle');
+
+    photoToggle.addEventListener('mousedown', function (evt) {
+      evt.preventDefault();
+
+      var startCoords = {
+        x: evt.clientX
+      };
+
+      var onMouseMove = function (evtMove) {
+        evtMove.preventDefault();
+
+        var shift = {
+          x: startCoords.x - evtMove.clientX
+        };
+
+        startCoords = {
+          x: evtMove.clientX
+        };
+
+        var limits = {
+          left: 637,
+          right: 910
+        };
+
+        var limits = {
+          left: photoControl.offsetLeft,
+          right: photoControl.offsetLeft + photoControl.offsetWidth - photoToggle.offsetWidth
+        };
+
+        console.log(limits.left);
+        console.log(limits.right);
+
+        console.log(photoToggle.offsetLeft);
+
+        if (photoToggle.offsetLeft < limits.left) {
+          photoToggle.style.left = limits.left + shift.x + 'px';
+        }
+        if (photoToggle.offsetLeft > limits.right) {
+          photoToggle.style.left = limits.right + shift.x + 'px';
+        }
+
+        photoToggle.style.left = (photoToggle.offsetLeft - shift.x) + 'px';
+      }
+
+      var onMouseUp = function (evtUp) {
+        evtUp.preventDefault();
+
+        document.removeEventListener('mousemove', onMouseMove);
+        document.removeEventListener('mouseup', onMouseUp);
+      }
+
+      document.addEventListener('mousemove', onMouseMove);
+      document.addEventListener('mouseup', onMouseUp);
+    }, false);
+  </script>
 </body>
 </html>
