@@ -8,7 +8,7 @@
   <link rel="preload" href="fonts/opensans.woff2" as="font">
   <link rel="preload" href="fonts/opensansbold.woff2" as="font">
   <link rel="preload" href="fonts/opensanslight.woff2" as="font">
-  <link rel="stylesheet" href="css/style.min.css">
+  <link rel="stylesheet" href="css/style.css">
   <script>
     // Picture element HTML5 shiv
     document.createElement( "picture" );
@@ -342,8 +342,9 @@
                   </button>
                 </div>
                 <div class="photo-post__range-control">
-                  <div class="photo-post__crop-scale"></div>
-                  <div class="photo-post__crop-toggle"></div>
+                  <input class="photo-post__crop-input" type="number" min="0" max="100" step="1" value="20" hidden>
+                  <div class="photo-post__crop-scale scale"></div>
+                  <div class="photo-post__crop-toggle toggle"></div>
                 </div>
               </div>
 
@@ -359,8 +360,9 @@
                   </button>
                 </div>
                 <div class="photo-post__range-control photo-post__range-control--none">
-                  <div class="photo-post__fill-scale"></div>
-                  <div class="photo-post__fill-toggle"></div>
+                  <input class="photo-post__fill-input" type="number" min="0" max="100" step="1" value="20" hidden>
+                  <div class="photo-post__fill-scale scale"></div>
+                  <div class="photo-post__fill-toggle toggle"></div>
                 </div>
               </div>
 
@@ -375,8 +377,9 @@
                   </button>
                 </div>
                 <div class="photo-post__range-control photo-post__range-control--none">
-                  <div class="photo-post__contrast-scale"></div>
-                  <div class="photo-post__contrast-toggle"></div>
+                  <input class="photo-post__crop-contrast" type="number" min="0" max="100" step="1" value="20" hidden>
+                  <div class="photo-post__contrast-scale scale"></div>
+                  <div class="photo-post__contrast-toggle toggle"></div>
                 </div>
               </div>
             </div>
@@ -429,63 +432,6 @@
     </div>
   </footer>
 
-  <script type="text/javascript">
-    var photoControl = document.querySelector('.photo-post__contrast-scale');
-    var photoToggle = document.querySelector('.photo-post__contrast-toggle');
-
-    photoToggle.addEventListener('mousedown', function (evt) {
-      evt.preventDefault();
-
-      var startCoords = {
-        x: evt.clientX
-      };
-
-      var onMouseMove = function (evtMove) {
-        evtMove.preventDefault();
-
-        var shift = {
-          x: startCoords.x - evtMove.clientX
-        };
-
-        startCoords = {
-          x: evtMove.clientX
-        };
-
-        var limits = {
-          left: 637,
-          right: 910
-        };
-
-        var limits = {
-          left: photoControl.offsetLeft,
-          right: photoControl.offsetLeft + photoControl.offsetWidth - photoToggle.offsetWidth
-        };
-
-        console.log(limits.left);
-        console.log(limits.right);
-
-        console.log(photoToggle.offsetLeft);
-
-        if (photoToggle.offsetLeft < limits.left) {
-          photoToggle.style.left = limits.left + shift.x + 'px';
-        }
-        if (photoToggle.offsetLeft > limits.right) {
-          photoToggle.style.left = limits.right + shift.x + 'px';
-        }
-
-        photoToggle.style.left = (photoToggle.offsetLeft - shift.x) + 'px';
-      }
-
-      var onMouseUp = function (evtUp) {
-        evtUp.preventDefault();
-
-        document.removeEventListener('mousemove', onMouseMove);
-        document.removeEventListener('mouseup', onMouseUp);
-      }
-
-      document.addEventListener('mousemove', onMouseMove);
-      document.addEventListener('mouseup', onMouseUp);
-    }, false);
-  </script>
+  <script src="js/slider.js"></script>
 </body>
 </html>
